@@ -80,6 +80,7 @@
   .sub span{color:var(--ink);font-weight:600;}
   .channel-link{color:var(--blue);text-decoration:none;font-weight:600;}
   .channel-link:hover{color:var(--red);}
+  td.col-analyze{white-space:nowrap;font-size:12px;}
   .refresh-line{
     margin:7px 0 0;
     font-size:12px;
@@ -259,7 +260,7 @@
     border-radius:10px;
   }
   table.record-table{
-    width:100%;border-collapse:collapse;font-size:13px;min-width:730px;
+    width:100%;border-collapse:collapse;font-size:13px;min-width:820px;
   }
   .record-table thead th{
     text-align:left;
@@ -395,6 +396,7 @@
           <th class="col-num" data-key="commentsWilson" title="Comments alone, Wilson-adjusted (not likes) &mdash; isolates real discussion from lower-effort likes, penalised for small sample sizes">Discussion Rate</th>
           <th class="col-num" data-key="lpv">Likes / View</th>
           <th class="col-num" data-key="successScore" title="Blends age-adjusted view velocity (views &#247; days live, floored at 3) with Wilson-adjusted engagement into one 0-100 score">Success Score</th>
+          <th title="Opens YouTube Studio's Analytics page for this video -- only shows real data if you're signed in with an account that has permission on this channel">Analyze</th>
         </tr>
       </thead>
       <tbody id="record-body"></tbody>
@@ -419,6 +421,7 @@
           <th class="col-num" data-key="commentsWilson" title="Comments alone, Wilson-adjusted (not likes) &mdash; isolates real discussion from lower-effort likes, penalised for small sample sizes">Discussion Rate</th>
           <th class="col-num" data-key="lpv">Likes / View</th>
           <th class="col-num" data-key="successScore" title="Blends age-adjusted view velocity (views &#247; days live, floored at 3) with Wilson-adjusted engagement into one 0-100 score, ranked against the other 19 videos in this table only">Success Score</th>
+          <th title="Opens YouTube Studio's Analytics page for this video -- only shows real data if you're signed in with an account that has permission on this channel">Analyze</th>
         </tr>
       </thead>
       <tbody id="popular-body"></tbody>
@@ -646,7 +649,8 @@
       '<td class="col-num">'+v.comments.toLocaleString()+'</td>' +
       '<td class="col-num discuss">'+formatRate(v.commentsWilson)+'</td>' +
       '<td class="col-num lpv">'+formatRate(likesPerView(v))+'</td>' +
-      '<td class="col-num success">'+Math.round(v.successScore)+'</td>';
+      '<td class="col-num success">'+Math.round(v.successScore)+'</td>' +
+      '<td class="col-analyze"><a class="channel-link" href="https://studio.youtube.com/video/'+v.id+'/analytics/tab-overview/period-default" target="_blank" rel="noopener">Analyze &#8599;</a></td>';
   }
 
   // A sortable stats table bound to one <table id="tableId"> -- both the
