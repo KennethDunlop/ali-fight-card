@@ -352,7 +352,7 @@
       <p class="eyebrow">Tracking</p>
       <h1 id="channel-title">Ali MacKensie</h1>
       <p class="sub" id="channel-sub">loading&hellip;</p>
-      <p class="refresh-line">Static snapshot from <time id="updated-at">&hellip;</time><span class="version">v1.5</span><span class="ask">Ask Claude to rebuild &amp; redeploy</span></p>
+      <p class="refresh-line">Auto-refreshed <time id="updated-at">&hellip;</time><span class="version" id="version-tag"></span></p>
     </div>
   </div>
 
@@ -361,7 +361,7 @@
 
 <section class="record-section">
   <h2 class="record-heading">Subscriber Watch</h2>
-  <p class="record-sub">Goal: 128 subscribers (double the current count). Tracking starts today &mdash; YouTube doesn't expose historical subscriber counts, so this log only grows from here, one refresh at a time.</p>
+  <p class="record-sub">Goal: <span id="sub-goal-num">128</span> subscribers (double the count at onboarding). YouTube doesn't expose historical subscriber counts, so this log only grows from here, one refresh at a time.</p>
   <div class="sub-top-row">
     <div class="chart-wrap" id="sub-chart"></div>
     <div class="sub-goal" id="sub-goal"></div>
@@ -495,82 +495,12 @@
 (function(){
   "use strict";
 
-  // ---- static build data: a real snapshot as of the "Static snapshot from"
-  // date in the header. This is a static site with no live database -- a
-  // refresh means asking Claude to fetch fresh YouTube data, rebuild this
-  // file, and push it to GitHub, which redeploys via Cloudflare Pages. ----
-  var SEED_META = {
-    channelTitle: "Ali MacKensie",
-    channelId: "UC24iC-l2nMOCRLvWNuArizw",
-    avatar: "thumbs/avatar.jpg",
-    avatarLarge: "thumbs/avatar-large.jpg",
-    channelUrl: "https://www.youtube.com/@Ali-MacKensie",
-    subscriberCount: 64,
-    videoCount: 145,
-    channelViews: 67480,
-    channelCreatedAt: "2021-09-15T19:42:23Z",
-    lastUpdated: "2026-09-15T16:17:48Z"
-  };
-
+  // ---- live data: fetched at page load from data.json, which a Cloudflare
+  // Worker (cron-triggered twice a day) keeps up to date by pulling from the
+  // YouTube Data API and pushing the new file to this repo. See the
+  // "How to apply" note in the Ali's Fight Card deployment memory for the
+  // full pipeline. SUBSCRIBER_GOAL is a fallback until data.json loads. ----
   var SUBSCRIBER_GOAL = 128;
-  var SEED_SUBSCRIBER_HISTORY = [
-    {date:"2026-09-15", subscriberCount:64}
-  ];
-
-  var SEED_VIDEOS = [
-    {id:"X-7VkejRVdo", title:"#motivation #boxing #cardio", publishedAt:"2026-09-13T15:43:48Z", thumbnail:"thumbs/X-7VkejRVdo.jpg", views:1314, likes:3, comments:0, durationSeconds:4},
-    {id:"OouspRxAKjY", title:"Effective reps #bodybuilding", publishedAt:"2026-09-10T15:06:39Z", thumbnail:"thumbs/OouspRxAKjY.jpg", views:558, likes:3, comments:0, durationSeconds:35},
-    {id:"JaNJx19lu00", title:"The primary driver of muscle growth #bodybuilding", publishedAt:"2026-09-09T15:36:09Z", thumbnail:"thumbs/JaNJx19lu00.jpg", views:188, likes:2, comments:0, durationSeconds:15},
-    {id:"Sg6p5AlnPvM", title:"Add Weight to the Bar #bodybuilding", publishedAt:"2026-09-08T15:17:35Z", thumbnail:"thumbs/Sg6p5AlnPvM.jpg", views:384, likes:3, comments:0, durationSeconds:17},
-    {id:"Y_ItD0EG_DI", title:"Why are you not seeing good progress in the gym #bodybuilding", publishedAt:"2026-09-07T14:51:19Z", thumbnail:"thumbs/Y_ItD0EG_DI.jpg", views:40, likes:2, comments:1, durationSeconds:19},
-    {id:"WfAgTH43s4A", title:"Get huge and athletic with this 👆 #bodybuilding #strengthtraining #squats", publishedAt:"2026-09-06T20:34:52Z", thumbnail:"thumbs/WfAgTH43s4A.jpg", views:17, likes:1, comments:0, durationSeconds:53},
-    {id:"oEqMfUJyyzg", title:"Size Vs Strength #bodybuilding #strengthtraining #hypertrophy", publishedAt:"2026-09-02T07:38:15Z", thumbnail:"thumbs/oEqMfUJyyzg.jpg", views:338, likes:4, comments:0, durationSeconds:38},
-    {id:"9VH8--83O9Y", title:"I don't have enough time to train #bodybuilding #powerbuilding #strengthtraining", publishedAt:"2026-09-01T15:16:14Z", thumbnail:"thumbs/9VH8--83O9Y.jpg", views:730, likes:10, comments:0, durationSeconds:84},
-    {id:"Svi5ySyfvLQ", title:"Pause squats 190kg × 5 #bodybuilding #legday #squats", publishedAt:"2026-08-30T12:53:21Z", thumbnail:"thumbs/Svi5ySyfvLQ.jpg", views:111, likes:3, comments:1, durationSeconds:49},
-    {id:"RSslvBuNkr8", title:"How to choose the right exercise #bodybuilding #hypertrophy", publishedAt:"2026-08-27T15:41:58Z", thumbnail:"thumbs/RSslvBuNkr8.jpg", views:125, likes:3, comments:0, durationSeconds:102},
-    {id:"b6BpkB3SD0Y", title:"Squatting for leg gains #bodybuilding #legday #squats", publishedAt:"2026-08-26T19:55:29Z", thumbnail:"thumbs/b6BpkB3SD0Y.jpg", views:795, likes:7, comments:1, durationSeconds:53},
-    {id:"zHukwWjoVm0", title:"Pause squats 180kg #bodybuilding #legday #squat", publishedAt:"2026-08-26T11:18:01Z", thumbnail:"thumbs/zHukwWjoVm0.jpg", views:169, likes:2, comments:0, durationSeconds:46},
-    {id:"FHNohttKEbE", title:"The best training split for beginners #bodybuilding #strengthtraining", publishedAt:"2026-08-24T17:41:37Z", thumbnail:"thumbs/FHNohttKEbE.jpg", views:868, likes:8, comments:0, durationSeconds:60},
-    {id:"QUYrF5XgYAI", title:"RDL 150kg #bodybuilding #legday #deadlift", publishedAt:"2026-08-05T08:40:37Z", thumbnail:"thumbs/QUYrF5XgYAI.jpg", views:96, likes:2, comments:0, durationSeconds:73},
-    {id:"QG8PRISEots", title:"Full Leg Day #bodybuilding #legday #quads", publishedAt:"2026-08-03T19:56:27Z", thumbnail:"thumbs/QG8PRISEots.jpg", views:822, likes:5, comments:0, durationSeconds:48},
-    {id:"zWHbELN2oIY", title:"10,000 bowls of beef mince and potatoes #bodybuilding #natty #physique", publishedAt:"2026-08-01T17:22:57Z", thumbnail:"thumbs/zWHbELN2oIY.jpg", views:852, likes:9, comments:1, durationSeconds:22},
-    {id:"HuugFvIE02E", title:"How to actually grow #bodybuilding #strengthtraining #powerbuilding", publishedAt:"2026-08-01T13:02:00Z", thumbnail:"thumbs/HuugFvIE02E.jpg", views:656, likes:13, comments:0, durationSeconds:53},
-    {id:"mgDptxpO0Ac", title:"If you can't add reps add weight #bodybuilding #pullups #strengthtraining", publishedAt:"2026-07-31T20:43:49Z", thumbnail:"thumbs/mgDptxpO0Ac.jpg", views:1210, likes:5, comments:0, durationSeconds:33},
-    {id:"cNz3Z9qyzrM", title:"Consistency is optimal #overheadpress #bodybuilding #strengthtraining #powerbuilding", publishedAt:"2026-07-29T22:34:26Z", thumbnail:"thumbs/cNz3Z9qyzrM.jpg", views:37, likes:3, comments:0, durationSeconds:39},
-    {id:"EOcmnxLVnzU", title:"Try this minimalist upper body workout  #bodybuilding #upperbodyworkout #powerbuilding", publishedAt:"2026-07-29T22:28:23Z", thumbnail:"thumbs/EOcmnxLVnzU.jpg", views:732, likes:16, comments:0, durationSeconds:64}
-  ];
-
-  // Latest upload over 3 minutes (YouTube's own Shorts threshold) - Ali's most
-  // recent longform video, found by scanning back through his upload history.
-  var SEED_LONGFORM = {
-    id:"aT2O7KogXr0", title:"Lower Body Workout", publishedAt:"2025-11-28T11:16:25Z",
-    thumbnail:"thumbs/aT2O7KogXr0.jpg", views:40, likes:1, comments:1, durationSeconds:301
-  };
-
-  // Ali's 20 most-viewed uploads channel-wide (not just the recent 20) --
-  // found by scanning his full upload history, not the latest-uploads window.
-  var SEED_POPULAR_VIDEOS = [
-    {id:"NPgoNuToxOE", title:"120kg high pull", publishedAt:"2025-06-27T14:31:08Z", thumbnail:"thumbs/NPgoNuToxOE.jpg", views:2002, likes:8, comments:0, durationSeconds:18},
-    {id:"jtHInxto5wI", title:"Seated row 60kg/side", publishedAt:"2025-04-06T13:22:07Z", thumbnail:"thumbs/jtHInxto5wI.jpg", views:1862, likes:9, comments:0, durationSeconds:33},
-    {id:"ty0_ve8H4Vk", title:"Bench press 120kg × 5", publishedAt:"2025-06-30T14:59:50Z", thumbnail:"thumbs/ty0_ve8H4Vk.jpg", views:1857, likes:6, comments:0, durationSeconds:28},
-    {id:"UCWcaiJl9cA", title:"Pause incline bench 130kg", publishedAt:"2025-04-06T12:41:57Z", thumbnail:"thumbs/UCWcaiJl9cA.jpg", views:1855, likes:9, comments:0, durationSeconds:27},
-    {id:"gRNUXp8Pn9s", title:"220kg × 5 SDL", publishedAt:"2025-04-18T18:29:26Z", thumbnail:"thumbs/gRNUXp8Pn9s.jpg", views:1529, likes:7, comments:0, durationSeconds:44},
-    {id:"7HFKg0K9jyQ", title:"14 Pull-ups 100kg bodyweight", publishedAt:"2025-07-31T07:25:08Z", thumbnail:"thumbs/7HFKg0K9jyQ.jpg", views:1347, likes:7, comments:0, durationSeconds:61},
-    {id:"dv3oCD4HGiA", title:"Overhead Press 90kg × 5", publishedAt:"2025-10-05T11:15:30Z", thumbnail:"thumbs/dv3oCD4HGiA.jpg", views:1335, likes:13, comments:2, durationSeconds:30},
-    {id:"9t427vEr5xg", title:"180kg × 9 Defecit deadlift", publishedAt:"2025-04-18T18:45:41Z", thumbnail:"thumbs/9t427vEr5xg.jpg", views:1322, likes:6, comments:0, durationSeconds:73},
-    {id:"X-7VkejRVdo", title:"#motivation #boxing #cardio", publishedAt:"2026-09-13T15:43:48Z", thumbnail:"thumbs/X-7VkejRVdo.jpg", views:1303, likes:3, comments:0, durationSeconds:4},
-    {id:"WlLC5RGFbF0", title:"Close Grip Larsen 110kg", publishedAt:"2025-09-14T07:20:14Z", thumbnail:"thumbs/WlLC5RGFbF0.jpg", views:1276, likes:7, comments:0, durationSeconds:47},
-    {id:"xXlLLIxPQp8", title:"wide grip pull-ups 13", publishedAt:"2025-07-13T17:59:52Z", thumbnail:"thumbs/xXlLLIxPQp8.jpg", views:1276, likes:8, comments:1, durationSeconds:48},
-    {id:"__5DzFj4gRU", title:"T-bar rows 100KG", publishedAt:"2025-12-01T08:53:00Z", thumbnail:"thumbs/__5DzFj4gRU.jpg", views:1260, likes:8, comments:0, durationSeconds:27},
-    {id:"vKWXtaHXSho", title:"200kg Pause Squat", publishedAt:"2025-12-03T09:43:39Z", thumbnail:"thumbs/vKWXtaHXSho.jpg", views:1211, likes:9, comments:0, durationSeconds:31},
-    {id:"mgDptxpO0Ac", title:"If you can't add reps add weight #bodybuilding #pullups #strengthtraining", publishedAt:"2026-07-31T20:43:49Z", thumbnail:"thumbs/mgDptxpO0Ac.jpg", views:1210, likes:5, comments:0, durationSeconds:33},
-    {id:"ichw5Qjcw7M", title:"The best quad building squat for tall lifters #bodybuilding #squats #legday", publishedAt:"2026-07-22T19:31:43Z", thumbnail:"thumbs/ichw5Qjcw7M.jpg", views:1207, likes:8, comments:0, durationSeconds:17},
-    {id:"ZjWfRFn5XAI", title:"200kg × 5 Deficit deadlifts", publishedAt:"2025-07-23T07:02:07Z", thumbnail:"thumbs/ZjWfRFn5XAI.jpg", views:1190, likes:11, comments:0, durationSeconds:53},
-    {id:"ROBuYD4TfOA", title:"Deficit deadlift 140kg × 10", publishedAt:"2025-04-10T13:40:14Z", thumbnail:"thumbs/ROBuYD4TfOA.jpg", views:1185, likes:5, comments:0, durationSeconds:50},
-    {id:"Z_p58sO8swQ", title:"Optimal dips", publishedAt:"2025-06-23T19:54:25Z", thumbnail:"thumbs/Z_p58sO8swQ.jpg", views:1176, likes:5, comments:1, durationSeconds:58},
-    {id:"qP_8URPsFmI", title:"Bench 110kg", publishedAt:"2025-06-23T19:15:55Z", thumbnail:"thumbs/qP_8URPsFmI.jpg", views:1158, likes:11, comments:1, durationSeconds:37},
-    {id:"UEuxT2GYLrs", title:"200kg × 9 deficit deadlift", publishedAt:"2025-07-28T16:10:19Z", thumbnail:"thumbs/UEuxT2GYLrs.jpg", views:1149, likes:12, comments:1, durationSeconds:87}
-  ];
 
   var updatedAtEl = document.getElementById("updated-at");
   var channelSub = document.getElementById("channel-sub");
@@ -1119,13 +1049,25 @@
     });
   }
 
-  // ---- initial paint from seed ----
-  renderMeta(SEED_META);
-  renderTable(SEED_VIDEOS.slice(0,20));
-  renderPopular(SEED_POPULAR_VIDEOS);
-  renderLongform(SEED_LONGFORM);
-  renderShortform(SEED_VIDEOS.slice(0,8));
-  renderSubscriberHistory(SEED_SUBSCRIBER_HISTORY);
+  // ---- load live data and paint ----
+  fetch("data.json", {cache:"no-store"})
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if(data.subscriberGoal) SUBSCRIBER_GOAL = data.subscriberGoal;
+      var versionTag = document.getElementById("version-tag");
+      if(versionTag && data.version) versionTag.textContent = "v"+data.version;
+      var goalNumEl = document.getElementById("sub-goal-num");
+      if(goalNumEl && data.subscriberGoal) goalNumEl.textContent = data.subscriberGoal;
+      renderMeta(data.meta);
+      renderTable((data.videos||[]).slice(0,20));
+      renderPopular(data.popularVideos||[]);
+      renderLongform(data.longform);
+      renderShortform((data.videos||[]).filter(function(v){ return v.durationSeconds<=180; }).slice(0,8));
+      renderSubscriberHistory(data.subscriberHistory||[]);
+    })
+    .catch(function(err){
+      channelSub.textContent = "Couldn't load live data (" + err.message + "). Try reloading the page.";
+    });
 
 })();
 </script>
