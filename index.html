@@ -301,6 +301,7 @@
     font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;white-space:nowrap;
   }
   td.col-num.lpv{color:var(--blue);font-weight:600;}
+  td.col-num.engaged{color:var(--blue);}
   td.col-num.success{color:var(--brass);font-weight:700;}
   .thumb-preview{
     position:fixed;z-index:200;pointer-events:none;
@@ -387,6 +388,7 @@
           <th data-key="title">Title</th>
           <th data-key="publishedAt">Released</th>
           <th class="col-num" data-key="views">Views</th>
+          <th class="col-num" data-key="engagedViews" title="Estimate, not a YouTube metric: views &#215; Wilson-adjusted engagement rate &mdash; roughly how many views represented real engagement rather than a passive replay">Engaged Views</th>
           <th class="col-num" data-key="likes">Likes</th>
           <th class="col-num" data-key="comments">Comments</th>
           <th class="col-num" data-key="lpv">Likes / View</th>
@@ -424,7 +426,7 @@
 <div class="chart-tooltip" id="chart-tooltip" hidden></div>
 
 <footer>
-  <span>Success Score (0&ndash;100) = 55% age-adjusted view velocity (views &divide; days live, with the age floored at 3 days so a brand-new video's opening-day spike &mdash; nearly every video gets one &mdash; can't inflate its rate, and an old video isn't rewarded just for having had longer to accumulate raw views) + 45% Wilson-adjusted engagement (likes+comments vs. views, penalised for small sample sizes so a couple of superfan likes on a low-view clip can't outrank real traction). Ranked against the other 19 videos shown, not an absolute scale. YouTube's public data has no watch-time, audience-retention, or day-by-day view history &mdash; only a live cumulative total &mdash; so this is the fairest comparison that data allows, not a perfect one.</span>
+  <span>Engaged Views = views &#215; Wilson-adjusted engagement rate &mdash; an estimate of how many views represented real engagement rather than a passive replay, not a metric YouTube itself publishes. Success Score (0&ndash;100) = 55% age-adjusted view velocity (views &divide; days live, with the age floored at 3 days so a brand-new video's opening-day spike &mdash; nearly every video gets one &mdash; can't inflate its rate, and an old video isn't rewarded just for having had longer to accumulate raw views) + 45% that same Wilson-adjusted engagement (likes+comments vs. views, penalised for small sample sizes so a couple of superfan likes on a low-view clip can't outrank real traction). Ranked against the other 19 videos shown, not an absolute scale. YouTube's public data has no watch-time, audience-retention, unique-viewer, or day-by-day view history &mdash; only a live cumulative total &mdash; so this is the fairest comparison that data allows, not a perfect one.</span>
 </footer>
 
 <script>
@@ -563,6 +565,10 @@
       for(var k in v){ copy[k]=v[k]; }
       copy.engagementWilson = eng*100;
       copy.viewsPerDay = vel;
+      // Not a YouTube metric -- YouTube doesn't publish one. An estimate of
+      // how many of the raw views represented real engagement, by scaling
+      // views down by the same Wilson-adjusted engagement rate used above.
+      copy.engagedViews = Math.round(v.views * eng);
       copy.successScore = 0.55*velScore + 0.45*engScore;
       return copy;
     });
@@ -610,6 +616,7 @@
         '<td class="col-title"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" title="'+escapeHtml(v.title)+'" data-thumb="'+v.thumbnail+'">'+escapeHtml(v.title)+'</a></td>' +
         '<td class="col-date">'+formatDate(v.publishedAt)+'</td>' +
         '<td class="col-num">'+v.views.toLocaleString()+'</td>' +
+        '<td class="col-num engaged">'+v.engagedViews.toLocaleString()+'</td>' +
         '<td class="col-num">'+v.likes.toLocaleString()+'</td>' +
         '<td class="col-num">'+v.comments.toLocaleString()+'</td>' +
         '<td class="col-num lpv">'+formatRate(likesPerView(v))+'</td>' +
