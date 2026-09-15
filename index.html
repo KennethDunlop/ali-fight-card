@@ -329,7 +329,7 @@
   td.col-num.success{color:var(--brass);font-weight:700;}
   .thumb-preview{
     position:fixed;z-index:200;pointer-events:none;
-    width:130px;aspect-ratio:9/16;border-radius:8px;overflow:hidden;
+    width:260px;aspect-ratio:9/16;border-radius:8px;overflow:hidden;
     background:#000;border:1px solid var(--paper-line);
     box-shadow:0 10px 28px rgba(0,0,0,.35);
   }
@@ -621,9 +621,9 @@
   // channel avatar), still overrides the detected image ratio.
   var thumbPreview = document.getElementById("thumb-preview");
   var thumbPreviewImg = document.getElementById("thumb-preview-img");
-  var thumbPreviewBoxW = 130, thumbPreviewBoxH = 231;
+  var thumbPreviewBoxW = 260, thumbPreviewBoxH = 462;
   function applyThumbPreviewSize(el, e){
-    var w = parseInt(el.dataset.thumbWidth, 10) || 130;
+    var w = parseInt(el.dataset.thumbWidth, 10) || 260;
     var ratio = el.dataset.thumbRatio;
     if(!ratio && thumbPreviewImg.naturalWidth && thumbPreviewImg.naturalHeight){
       ratio = thumbPreviewImg.naturalWidth+"/"+thumbPreviewImg.naturalHeight;
@@ -876,7 +876,7 @@
       avatarLink.href = channelUrl;
       if(meta.avatarLarge){
         avatarLink.dataset.thumb = meta.avatarLarge;
-        avatarLink.dataset.thumbWidth = "180";
+        avatarLink.dataset.thumbWidth = "360";
         avatarLink.dataset.thumbRatio = "1/1";
       }
     }
