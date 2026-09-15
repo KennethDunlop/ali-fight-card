@@ -647,7 +647,14 @@
   });
 
   function recordRowHtml(v){
-    return '<td class="col-title"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" title="'+escapeHtml(v.title)+'" data-thumb="'+v.thumbnail+'">'+escapeHtml(v.title)+'</a></td>' +
+    // Shorts thumbnails preview vertically, everything else (longform) previews
+    // in its native 16:9 landscape shape -- same threshold used to bucket
+    // Shortform vs Longform elsewhere on the page.
+    var isShort = v.durationSeconds <= 180;
+    var thumbAttrs = isShort
+      ? 'data-thumb="'+v.thumbnail+'"'
+      : 'data-thumb="'+v.thumbnail+'" data-thumb-width="220" data-thumb-ratio="16/9"';
+    return '<td class="col-title"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" title="'+escapeHtml(v.title)+'" '+thumbAttrs+'>'+escapeHtml(v.title)+'</a></td>' +
       '<td class="col-date">'+formatDate(v.publishedAt)+'</td>' +
       '<td class="col-num">'+v.views.toLocaleString()+'</td>' +
       '<td class="col-num engaged">'+v.engagedViews.toLocaleString()+'</td>' +
