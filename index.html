@@ -352,7 +352,7 @@
       <p class="eyebrow">Tracking</p>
       <h1 id="channel-title">Ali MacKensie</h1>
       <p class="sub" id="channel-sub">loading&hellip;</p>
-      <p class="refresh-line">Static snapshot from <time id="updated-at">&hellip;</time><span class="version">v1.2</span><span class="ask">Ask Claude to rebuild &amp; redeploy</span></p>
+      <p class="refresh-line">Static snapshot from <time id="updated-at">&hellip;</time><span class="version">v1.3</span><span class="ask">Ask Claude to rebuild &amp; redeploy</span></p>
     </div>
   </div>
 
@@ -402,7 +402,7 @@
   <h2 class="record-heading">Full Fight Record</h2>
   <p class="record-sub">Last 20 uploads. Click a column to sort.</p>
   <div class="table-scroll">
-    <table class="record-table">
+    <table class="record-table" id="fight-record-table">
       <thead>
         <tr>
           <th data-key="title">Title</th>
@@ -417,6 +417,29 @@
         </tr>
       </thead>
       <tbody id="record-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="record-section">
+  <h2 class="record-heading">Hall of Fame</h2>
+  <p class="record-sub">Ali's 20 most-viewed uploads across his whole channel, all-time &mdash; not just the recent 20 above. Click a column to sort.</p>
+  <div class="table-scroll">
+    <table class="record-table" id="popular-table">
+      <thead>
+        <tr>
+          <th data-key="title">Title</th>
+          <th data-key="publishedAt">Released</th>
+          <th class="col-num" data-key="views">Views</th>
+          <th class="col-num" data-key="engagedViews" title="Estimate, not a YouTube metric: views &#215; Wilson-adjusted engagement rate &mdash; roughly how many views represented real engagement rather than a passive replay">Engaged Views</th>
+          <th class="col-num" data-key="likes">Likes</th>
+          <th class="col-num" data-key="comments">Comments</th>
+          <th class="col-num" data-key="commentsWilson" title="Comments alone, Wilson-adjusted (not likes) &mdash; isolates real discussion from lower-effort likes, penalised for small sample sizes">Discussion Rate</th>
+          <th class="col-num" data-key="lpv">Likes / View</th>
+          <th class="col-num" data-key="successScore" title="Blends age-adjusted view velocity (views &#247; days live, floored at 3) with Wilson-adjusted engagement into one 0-100 score, ranked against the other 19 videos in this table only">Success Score</th>
+        </tr>
+      </thead>
+      <tbody id="popular-body"></tbody>
     </table>
   </div>
 </section>
@@ -524,6 +547,31 @@
     thumbnail:"thumbs/aT2O7KogXr0.jpg", views:40, likes:1, comments:1, durationSeconds:301
   };
 
+  // Ali's 20 most-viewed uploads channel-wide (not just the recent 20) --
+  // found by scanning his full upload history, not the latest-uploads window.
+  var SEED_POPULAR_VIDEOS = [
+    {id:"NPgoNuToxOE", title:"120kg high pull", publishedAt:"2025-06-27T14:31:08Z", thumbnail:"thumbs/NPgoNuToxOE.jpg", views:2002, likes:8, comments:0, durationSeconds:18},
+    {id:"jtHInxto5wI", title:"Seated row 60kg/side", publishedAt:"2025-04-06T13:22:07Z", thumbnail:"thumbs/jtHInxto5wI.jpg", views:1862, likes:9, comments:0, durationSeconds:33},
+    {id:"ty0_ve8H4Vk", title:"Bench press 120kg × 5", publishedAt:"2025-06-30T14:59:50Z", thumbnail:"thumbs/ty0_ve8H4Vk.jpg", views:1857, likes:6, comments:0, durationSeconds:28},
+    {id:"UCWcaiJl9cA", title:"Pause incline bench 130kg", publishedAt:"2025-04-06T12:41:57Z", thumbnail:"thumbs/UCWcaiJl9cA.jpg", views:1855, likes:9, comments:0, durationSeconds:27},
+    {id:"gRNUXp8Pn9s", title:"220kg × 5 SDL", publishedAt:"2025-04-18T18:29:26Z", thumbnail:"thumbs/gRNUXp8Pn9s.jpg", views:1529, likes:7, comments:0, durationSeconds:44},
+    {id:"7HFKg0K9jyQ", title:"14 Pull-ups 100kg bodyweight", publishedAt:"2025-07-31T07:25:08Z", thumbnail:"thumbs/7HFKg0K9jyQ.jpg", views:1347, likes:7, comments:0, durationSeconds:61},
+    {id:"dv3oCD4HGiA", title:"Overhead Press 90kg × 5", publishedAt:"2025-10-05T11:15:30Z", thumbnail:"thumbs/dv3oCD4HGiA.jpg", views:1335, likes:13, comments:2, durationSeconds:30},
+    {id:"9t427vEr5xg", title:"180kg × 9 Defecit deadlift", publishedAt:"2025-04-18T18:45:41Z", thumbnail:"thumbs/9t427vEr5xg.jpg", views:1322, likes:6, comments:0, durationSeconds:73},
+    {id:"X-7VkejRVdo", title:"#motivation #boxing #cardio", publishedAt:"2026-09-13T15:43:48Z", thumbnail:"thumbs/X-7VkejRVdo.jpg", views:1303, likes:3, comments:0, durationSeconds:4},
+    {id:"WlLC5RGFbF0", title:"Close Grip Larsen 110kg", publishedAt:"2025-09-14T07:20:14Z", thumbnail:"thumbs/WlLC5RGFbF0.jpg", views:1276, likes:7, comments:0, durationSeconds:47},
+    {id:"xXlLLIxPQp8", title:"wide grip pull-ups 13", publishedAt:"2025-07-13T17:59:52Z", thumbnail:"thumbs/xXlLLIxPQp8.jpg", views:1276, likes:8, comments:1, durationSeconds:48},
+    {id:"__5DzFj4gRU", title:"T-bar rows 100KG", publishedAt:"2025-12-01T08:53:00Z", thumbnail:"thumbs/__5DzFj4gRU.jpg", views:1260, likes:8, comments:0, durationSeconds:27},
+    {id:"vKWXtaHXSho", title:"200kg Pause Squat", publishedAt:"2025-12-03T09:43:39Z", thumbnail:"thumbs/vKWXtaHXSho.jpg", views:1211, likes:9, comments:0, durationSeconds:31},
+    {id:"mgDptxpO0Ac", title:"If you can't add reps add weight #bodybuilding #pullups #strengthtraining", publishedAt:"2026-07-31T20:43:49Z", thumbnail:"thumbs/mgDptxpO0Ac.jpg", views:1210, likes:5, comments:0, durationSeconds:33},
+    {id:"ichw5Qjcw7M", title:"The best quad building squat for tall lifters #bodybuilding #squats #legday", publishedAt:"2026-07-22T19:31:43Z", thumbnail:"thumbs/ichw5Qjcw7M.jpg", views:1207, likes:8, comments:0, durationSeconds:17},
+    {id:"ZjWfRFn5XAI", title:"200kg × 5 Deficit deadlifts", publishedAt:"2025-07-23T07:02:07Z", thumbnail:"thumbs/ZjWfRFn5XAI.jpg", views:1190, likes:11, comments:0, durationSeconds:53},
+    {id:"ROBuYD4TfOA", title:"Deficit deadlift 140kg × 10", publishedAt:"2025-04-10T13:40:14Z", thumbnail:"thumbs/ROBuYD4TfOA.jpg", views:1185, likes:5, comments:0, durationSeconds:50},
+    {id:"Z_p58sO8swQ", title:"Optimal dips", publishedAt:"2025-06-23T19:54:25Z", thumbnail:"thumbs/Z_p58sO8swQ.jpg", views:1176, likes:5, comments:1, durationSeconds:58},
+    {id:"qP_8URPsFmI", title:"Bench 110kg", publishedAt:"2025-06-23T19:15:55Z", thumbnail:"thumbs/qP_8URPsFmI.jpg", views:1158, likes:11, comments:1, durationSeconds:37},
+    {id:"UEuxT2GYLrs", title:"200kg × 9 deficit deadlift", publishedAt:"2025-07-28T16:10:19Z", thumbnail:"thumbs/UEuxT2GYLrs.jpg", views:1149, likes:12, comments:1, durationSeconds:87}
+  ];
+
   var updatedAtEl = document.getElementById("updated-at");
   var channelSub = document.getElementById("channel-sub");
   var channelTitleEl = document.getElementById("channel-title");
@@ -619,11 +667,6 @@
     });
   }
 
-  // ---- record table (latest 20, sortable) ----
-  var recordBody = document.getElementById("record-body");
-  var tableVideosCache = [];
-  var tableSort = {key:"publishedAt", dir:"desc"};
-
   // Thumbnail preview that follows the cursor while hovering any element
   // carrying a data-thumb attribute -- table title links and the channel
   // avatar alike. data-thumb-width/data-thumb-ratio let a hover target pick
@@ -667,59 +710,89 @@
     if(el) thumbPreview.hidden = true;
   });
 
-  function renderTableRows(videos){
-    recordBody.innerHTML = "";
-    videos.forEach(function(v){
-      var tr = document.createElement("tr");
-      tr.innerHTML =
-        '<td class="col-title"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" title="'+escapeHtml(v.title)+'" data-thumb="'+v.thumbnail+'">'+escapeHtml(v.title)+'</a></td>' +
-        '<td class="col-date">'+formatDate(v.publishedAt)+'</td>' +
-        '<td class="col-num">'+v.views.toLocaleString()+'</td>' +
-        '<td class="col-num engaged">'+v.engagedViews.toLocaleString()+'</td>' +
-        '<td class="col-num">'+v.likes.toLocaleString()+'</td>' +
-        '<td class="col-num">'+v.comments.toLocaleString()+'</td>' +
-        '<td class="col-num discuss">'+formatRate(v.commentsWilson)+'</td>' +
-        '<td class="col-num lpv">'+formatRate(likesPerView(v))+'</td>' +
-        '<td class="col-num success">'+Math.round(v.successScore)+'</td>';
-      recordBody.appendChild(tr);
-    });
+  function recordRowHtml(v){
+    return '<td class="col-title"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" title="'+escapeHtml(v.title)+'" data-thumb="'+v.thumbnail+'">'+escapeHtml(v.title)+'</a></td>' +
+      '<td class="col-date">'+formatDate(v.publishedAt)+'</td>' +
+      '<td class="col-num">'+v.views.toLocaleString()+'</td>' +
+      '<td class="col-num engaged">'+v.engagedViews.toLocaleString()+'</td>' +
+      '<td class="col-num">'+v.likes.toLocaleString()+'</td>' +
+      '<td class="col-num">'+v.comments.toLocaleString()+'</td>' +
+      '<td class="col-num discuss">'+formatRate(v.commentsWilson)+'</td>' +
+      '<td class="col-num lpv">'+formatRate(likesPerView(v))+'</td>' +
+      '<td class="col-num success">'+Math.round(v.successScore)+'</td>';
   }
 
-  function updateSortIndicators(){
-    document.querySelectorAll(".record-table th[data-key]").forEach(function(th){
-      th.classList.remove("sort-asc","sort-desc");
-      th.removeAttribute("aria-sort");
-      if(th.dataset.key === tableSort.key){
-        th.classList.add(tableSort.dir === "asc" ? "sort-asc" : "sort-desc");
-        th.setAttribute("aria-sort", tableSort.dir === "asc" ? "ascending" : "descending");
-      }
+  // A sortable stats table bound to one <table id="tableId"> -- both the
+  // Full Fight Record and the Hall of Fame use this, each with independent
+  // sort state so clicking a column in one never affects the other.
+  function createRecordTable(tableId, bodyId, defaultKey, defaultDir){
+    var body = document.getElementById(bodyId);
+    var headSelector = "#"+tableId+" th[data-key]";
+    var cache = [];
+    var sort = {key: defaultKey, dir: defaultDir};
+
+    function renderRows(videos){
+      body.innerHTML = "";
+      videos.forEach(function(v){
+        var tr = document.createElement("tr");
+        tr.innerHTML = recordRowHtml(v);
+        body.appendChild(tr);
+      });
+    }
+    function updateIndicators(){
+      document.querySelectorAll(headSelector).forEach(function(th){
+        th.classList.remove("sort-asc","sort-desc");
+        th.removeAttribute("aria-sort");
+        if(th.dataset.key === sort.key){
+          th.classList.add(sort.dir === "asc" ? "sort-asc" : "sort-desc");
+          th.setAttribute("aria-sort", sort.dir === "asc" ? "ascending" : "descending");
+        }
+      });
+    }
+    function apply(){
+      var key = sort.key, dir = sort.dir;
+      var arr = cache.slice();
+      arr.sort(function(a,b){
+        var av, bv;
+        if(key === "lpv"){ av = likesPerView(a); bv = likesPerView(b); }
+        else if(key === "title"){ av = a.title.toLowerCase(); bv = b.title.toLowerCase(); }
+        else if(key === "publishedAt"){ av = new Date(a.publishedAt).getTime(); bv = new Date(b.publishedAt).getTime(); }
+        else { av = a[key]; bv = b[key]; }
+        if(av < bv) return dir === "asc" ? -1 : 1;
+        if(av > bv) return dir === "asc" ? 1 : -1;
+        return 0;
+      });
+      renderRows(arr);
+      updateIndicators();
+    }
+    document.querySelectorAll(headSelector).forEach(function(th){
+      th.addEventListener("click", function(){
+        var key = th.dataset.key;
+        if(sort.key === key){ sort.dir = sort.dir === "asc" ? "desc" : "asc"; }
+        else { sort.key = key; sort.dir = key === "title" ? "asc" : "desc"; }
+        apply();
+      });
     });
+    return {
+      setData: function(videos){ cache = videos; apply(); }
+    };
   }
 
-  function applyTableSort(){
-    var key = tableSort.key, dir = tableSort.dir;
-    var arr = tableVideosCache.slice();
-    arr.sort(function(a,b){
-      var av, bv;
-      if(key === "lpv"){ av = likesPerView(a); bv = likesPerView(b); }
-      else if(key === "title"){ av = a.title.toLowerCase(); bv = b.title.toLowerCase(); }
-      else if(key === "publishedAt"){ av = new Date(a.publishedAt).getTime(); bv = new Date(b.publishedAt).getTime(); }
-      else { av = a[key]; bv = b[key]; }
-      if(av < bv) return dir === "asc" ? -1 : 1;
-      if(av > bv) return dir === "asc" ? 1 : -1;
-      return 0;
-    });
-    renderTableRows(arr);
-    updateSortIndicators();
-  }
+  var fightRecordTable = createRecordTable("fight-record-table", "record-body", "publishedAt", "desc");
+  var popularTable = createRecordTable("popular-table", "popular-body", "views", "desc");
 
   function renderTable(videos){
     if(!videos || !videos.length) return;
-    tableVideosCache = computeScores(videos);
-    applyTableSort();
-    renderLeaderboard(tableVideosCache);
-    renderHashtags(tableVideosCache);
-    renderDuration(tableVideosCache);
+    var scored = computeScores(videos);
+    fightRecordTable.setData(scored);
+    renderLeaderboard(scored);
+    renderHashtags(scored);
+    renderDuration(scored);
+  }
+
+  function renderPopular(videos){
+    if(!videos || !videos.length) return;
+    popularTable.setData(computeScores(videos));
   }
 
   // ---- hashtag breakdown ----
@@ -828,18 +901,6 @@
     });
   }
 
-  document.querySelectorAll(".record-table th[data-key]").forEach(function(th){
-    th.addEventListener("click", function(){
-      var key = th.dataset.key;
-      if(tableSort.key === key){
-        tableSort.dir = tableSort.dir === "asc" ? "desc" : "asc";
-      }else{
-        tableSort.key = key;
-        tableSort.dir = key === "title" ? "asc" : "desc";
-      }
-      applyTableSort();
-    });
-  });
 
   function formatChannelAge(iso){
     var start = new Date(iso), now = new Date();
@@ -1055,6 +1116,7 @@
   // ---- initial paint from seed ----
   renderMeta(SEED_META);
   renderTable(SEED_VIDEOS.slice(0,20));
+  renderPopular(SEED_POPULAR_VIDEOS);
   renderLongform(SEED_LONGFORM);
   renderShortform(SEED_VIDEOS.slice(0,8));
   renderSubscriberHistory(SEED_SUBSCRIBER_HISTORY);
