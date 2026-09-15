@@ -129,9 +129,12 @@ async function refresh(env) {
   history.push({ date: today, subscriberCount: parseInt(channel.statistics.subscriberCount || "0", 10) });
   history.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-  // 8. Version bump (+0.1, matching the site's existing convention).
-  const prevVersion = parseFloat(currentData.version || "1.6");
-  const nextVersion = (Math.round((prevVersion + 0.1) * 10) / 10).toFixed(1);
+  // 8. Version bump: the number after the dot is a plain incrementing
+  // integer, not a decimal -- so it goes 1.9, 1.10, 1.11, ... and never
+  // rolls over into 2.0.
+  const versionParts = String(currentData.version || "1.13").split(".");
+  const nextMinor = parseInt(versionParts[1] || "0", 10) + 1;
+  const nextVersion = versionParts[0] + "." + nextMinor;
 
   const toSeedShape = (v) => ({
     id: v.id,
