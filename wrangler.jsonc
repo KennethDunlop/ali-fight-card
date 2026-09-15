@@ -1,0 +1,8 @@
+{
+  "name": "ali-fight-card-refresh",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-15",
+  "triggers": {
+    "crons": ["0 7,19 * * *"]
+  }
+}
