@@ -77,11 +77,15 @@
     padding-bottom:18px;
   }
   .channel-id{display:flex;align-items:center;gap:14px;}
+  .avatar-link{display:block;border-radius:50%;flex-shrink:0;}
+  .avatar-link:focus-visible{outline:2px solid var(--focus);outline-offset:2px;}
   .avatar{
     width:56px;height:56px;border-radius:50%;
     border:2px solid var(--paper-line);
     object-fit:cover;flex-shrink:0;background:var(--paper-raised);
+    display:block;transition:border-color .15s ease;
   }
+  .avatar-link:hover .avatar{border-color:var(--blue);}
   .eyebrow{
     font-family:'IBM Plex Mono',monospace;
     font-size:11px;letter-spacing:.12em;text-transform:uppercase;
@@ -103,6 +107,8 @@
     font-variant-numeric:tabular-nums;
   }
   .sub span{color:var(--ink);font-weight:600;}
+  .channel-link{color:var(--blue);text-decoration:none;font-weight:600;}
+  .channel-link:hover{color:var(--red);}
   .refresh-line{
     margin:7px 0 0;
     font-size:12px;
@@ -335,7 +341,9 @@
 
 <header class="marquee">
   <div class="channel-id">
-    <img class="avatar" id="avatar" alt="" src="" />
+    <a class="avatar-link" id="avatar-link" href="https://www.youtube.com/@Ali-MacKensie" target="_blank" rel="noopener" aria-label="View Ali MacKensie's channel on YouTube">
+      <img class="avatar" id="avatar" alt="" src="" />
+    </a>
     <div>
       <p class="eyebrow">Tracking</p>
       <h1 id="channel-title">Ali MacKensie</h1>
@@ -468,6 +476,8 @@
     channelTitle: "Ali MacKensie",
     channelId: "UC24iC-l2nMOCRLvWNuArizw",
     avatar: "thumbs/avatar.jpg",
+    avatarLarge: "thumbs/avatar-large.jpg",
+    channelUrl: "https://www.youtube.com/@Ali-MacKensie",
     subscriberCount: 64,
     videoCount: 145,
     channelViews: 67480,
@@ -610,34 +620,48 @@
   var tableVideosCache = [];
   var tableSort = {key:"publishedAt", dir:"desc"};
 
-  // Thumbnail preview that follows the cursor while hovering a title link.
+  // Thumbnail preview that follows the cursor while hovering any element
+  // carrying a data-thumb attribute -- table title links and the channel
+  // avatar alike. data-thumb-width/data-thumb-ratio let a hover target pick
+  // its own preview size/shape (default: a 130px-wide 9:16 video thumbnail).
   var thumbPreview = document.getElementById("thumb-preview");
   var thumbPreviewImg = document.getElementById("thumb-preview-img");
-  function positionThumbPreview(e){
+  function thumbPreviewSize(el){
+    var w = parseInt(el.dataset.thumbWidth, 10) || 130;
+    var ratio = el.dataset.thumbRatio || "9/16";
+    var parts = ratio.split("/");
+    var h = w * (parseFloat(parts[1]) / parseFloat(parts[0]));
+    return {w:w, h:h, ratio:ratio};
+  }
+  function positionThumbPreview(e, w, h){
     var pad = 16;
     var x = e.clientX + pad;
     var y = e.clientY + pad;
-    if(x + 130 > window.innerWidth) x = e.clientX - 130 - pad;
-    if(y + 231 > window.innerHeight) y = Math.max(pad, window.innerHeight - 231 - pad);
+    if(x + w > window.innerWidth) x = e.clientX - w - pad;
+    if(y + h > window.innerHeight) y = Math.max(pad, window.innerHeight - h - pad);
     thumbPreview.style.left = x+"px";
     thumbPreview.style.top = y+"px";
   }
-  recordBody.addEventListener("mouseover", function(e){
-    var link = e.target.closest ? e.target.closest("a[data-thumb]") : null;
-    if(!link) return;
-    thumbPreviewImg.src = link.dataset.thumb;
+  document.addEventListener("mouseover", function(e){
+    var el = e.target.closest ? e.target.closest("[data-thumb]") : null;
+    if(!el) return;
+    var size = thumbPreviewSize(el);
+    thumbPreviewImg.src = el.dataset.thumb;
+    thumbPreview.style.width = size.w+"px";
+    thumbPreview.style.aspectRatio = size.ratio;
     thumbPreview.hidden = false;
-    positionThumbPreview(e);
+    positionThumbPreview(e, size.w, size.h);
   });
-  recordBody.addEventListener("mousemove", function(e){
+  document.addEventListener("mousemove", function(e){
     if(thumbPreview.hidden) return;
-    positionThumbPreview(e);
+    var el = e.target.closest ? e.target.closest("[data-thumb]") : null;
+    var size = el ? thumbPreviewSize(el) : {w:130, h:231};
+    positionThumbPreview(e, size.w, size.h);
   });
-  recordBody.addEventListener("mouseout", function(e){
-    var link = e.target.closest ? e.target.closest("a[data-thumb]") : null;
-    if(link) thumbPreview.hidden = true;
+  document.addEventListener("mouseout", function(e){
+    var el = e.target.closest ? e.target.closest("[data-thumb]") : null;
+    if(el) thumbPreview.hidden = true;
   });
-  recordBody.addEventListener("mouseleave", function(){ thumbPreview.hidden = true; });
 
   function renderTableRows(videos){
     recordBody.innerHTML = "";
@@ -828,11 +852,22 @@
     if(!meta) return;
     channelTitleEl.textContent = meta.channelTitle || "Ali MacKensie";
     if(meta.avatar) avatarEl.src = meta.avatar;
+    var channelUrl = meta.channelUrl || "https://www.youtube.com/@Ali-MacKensie";
+    var avatarLink = document.getElementById("avatar-link");
+    if(avatarLink){
+      avatarLink.href = channelUrl;
+      if(meta.avatarLarge){
+        avatarLink.dataset.thumb = meta.avatarLarge;
+        avatarLink.dataset.thumbWidth = "180";
+        avatarLink.dataset.thumbRatio = "1/1";
+      }
+    }
     var bits = [];
     if(meta.subscriberCount!=null) bits.push(meta.subscriberCount+" subscribers");
     if(meta.videoCount!=null) bits.push(meta.videoCount+" uploads");
     if(meta.channelViews!=null) bits.push(formatCount(meta.channelViews)+" lifetime views");
     if(meta.channelCreatedAt!=null) bits.push(formatChannelAge(meta.channelCreatedAt)+" on YouTube");
+    bits.push('<a class="channel-link" href="'+channelUrl+'" target="_blank" rel="noopener">View channel &#8599;</a>');
     channelSub.innerHTML = bits.join(" &middot; ");
     if(meta.lastUpdated){
       updatedAtEl.textContent = relTime(meta.lastUpdated) + " (" + formatDate(meta.lastUpdated) + ")";
