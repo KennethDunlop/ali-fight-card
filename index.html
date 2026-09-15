@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ali's Fight Card</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
@@ -325,6 +330,8 @@
     .settings-panel{right:auto;left:0;}
   }
 </style>
+</head>
+<body>
 
 <header class="marquee">
   <div class="channel-id">
@@ -724,7 +731,10 @@
   }
 
   // ---- duration breakdown ----
-  var DURATION_BUCKETS = ["Under 15s", "15–30s", "30–60s", "60s+"];
+  var EN_DASH = String.fromCharCode(8211); // built from an ASCII code point, not a
+  // literal character, so it can't be mangled by any tool/host along the way
+  // that isn't strictly UTF-8 clean.
+  var DURATION_BUCKETS = ["Under 15s", "15"+EN_DASH+"30s", "30"+EN_DASH+"60s", "60s+"];
   function durationBucket(sec){
     if(sec<15) return DURATION_BUCKETS[0];
     if(sec<30) return DURATION_BUCKETS[1];
@@ -1012,3 +1022,6 @@
 
 })();
 </script>
+
+</body>
+</html>
