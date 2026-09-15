@@ -605,16 +605,28 @@
 
   // Thumbnail preview that follows the cursor while hovering any element
   // carrying a data-thumb attribute -- table title links and the channel
-  // avatar alike. data-thumb-width/data-thumb-ratio let a hover target pick
-  // its own preview size/shape (default: a 130px-wide 9:16 video thumbnail).
+  // avatar alike. Size follows the actual thumbnail image's own pixel
+  // dimensions once it loads (not the video's duration -- some Shorts use a
+  // landscape source image and some longform clips a cropped vertical one).
+  // data-thumb-ratio, when an element sets it explicitly (e.g. the square
+  // channel avatar), still overrides the detected image ratio.
   var thumbPreview = document.getElementById("thumb-preview");
   var thumbPreviewImg = document.getElementById("thumb-preview-img");
-  function thumbPreviewSize(el){
+  var thumbPreviewBoxW = 130, thumbPreviewBoxH = 231;
+  function applyThumbPreviewSize(el, e){
     var w = parseInt(el.dataset.thumbWidth, 10) || 130;
-    var ratio = el.dataset.thumbRatio || "9/16";
+    var ratio = el.dataset.thumbRatio;
+    if(!ratio && thumbPreviewImg.naturalWidth && thumbPreviewImg.naturalHeight){
+      ratio = thumbPreviewImg.naturalWidth+"/"+thumbPreviewImg.naturalHeight;
+    }
+    ratio = ratio || "9/16";
     var parts = ratio.split("/");
     var h = w * (parseFloat(parts[1]) / parseFloat(parts[0]));
-    return {w:w, h:h, ratio:ratio};
+    thumbPreviewBoxW = w;
+    thumbPreviewBoxH = h;
+    thumbPreview.style.width = w+"px";
+    thumbPreview.style.aspectRatio = ratio;
+    positionThumbPreview(e, w, h);
   }
   function positionThumbPreview(e, w, h){
     var pad = 16;
@@ -628,18 +640,14 @@
   document.addEventListener("mouseover", function(e){
     var el = e.target.closest ? e.target.closest("[data-thumb]") : null;
     if(!el) return;
-    var size = thumbPreviewSize(el);
     thumbPreviewImg.src = el.dataset.thumb;
-    thumbPreview.style.width = size.w+"px";
-    thumbPreview.style.aspectRatio = size.ratio;
     thumbPreview.hidden = false;
-    positionThumbPreview(e, size.w, size.h);
+    applyThumbPreviewSize(el, e);
+    thumbPreviewImg.onload = function(){ applyThumbPreviewSize(el, e); };
   });
   document.addEventListener("mousemove", function(e){
     if(thumbPreview.hidden) return;
-    var el = e.target.closest ? e.target.closest("[data-thumb]") : null;
-    var size = el ? thumbPreviewSize(el) : {w:130, h:231};
-    positionThumbPreview(e, size.w, size.h);
+    positionThumbPreview(e, thumbPreviewBoxW, thumbPreviewBoxH);
   });
   document.addEventListener("mouseout", function(e){
     var el = e.target.closest ? e.target.closest("[data-thumb]") : null;
@@ -647,14 +655,7 @@
   });
 
   function recordRowHtml(v){
-    // Shorts thumbnails preview vertically, everything else (longform) previews
-    // in its native 16:9 landscape shape -- same threshold used to bucket
-    // Shortform vs Longform elsewhere on the page.
-    var isShort = v.durationSeconds <= 180;
-    var thumbAttrs = isShort
-      ? 'data-thumb="'+v.thumbnail+'"'
-      : 'data-thumb="'+v.thumbnail+'" data-thumb-width="220" data-thumb-ratio="16/9"';
-    return '<td class="col-title"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" title="'+escapeHtml(v.title)+'" '+thumbAttrs+'>'+escapeHtml(v.title)+'</a></td>' +
+    return '<td class="col-title"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" title="'+escapeHtml(v.title)+'" data-thumb="'+v.thumbnail+'">'+escapeHtml(v.title)+'</a></td>' +
       '<td class="col-date">'+formatDate(v.publishedAt)+'</td>' +
       '<td class="col-num">'+v.views.toLocaleString()+'</td>' +
       '<td class="col-num engaged">'+v.engagedViews.toLocaleString()+'</td>' +
