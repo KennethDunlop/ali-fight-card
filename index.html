@@ -7,52 +7,23 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
+  /* Midnight Arena -- a single committed dark look, not adapted per viewer
+     theme preference (Kenneth chose this deliberately over the old
+     light/dark "Vintage Paper" pair). */
   :root{
-    --paper:#EDEAE2;
-    --paper-raised:#E1DDD1;
-    --paper-line:#CFC9B9;
-    --ink:#1C1815;
-    --ink-dim:#6B6459;
-    --red:#AF3327;
-    --red-ink:#7C241C;
-    --blue:#28577C;
-    --blue-soft:#D7E1E9;
-    --brass:#93701F;
-    --brass-soft:#EADFC0;
-    --shadow: 0 1px 0 rgba(28,24,21,.06);
-    --focus: #28577C;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --paper:#161310;
-      --paper-raised:#211D17;
-      --paper-line:#3A3327;
-      --ink:#EDE7DA;
-      --ink-dim:#A79E8E;
-      --red:#E06A57;
-      --red-ink:#F0968660;
-      --blue:#79ADD4;
-      --blue-soft:#20303C;
-      --brass:#D2AA55;
-      --brass-soft:#3A2F19;
-      --shadow: 0 1px 0 rgba(0,0,0,.4);
-      --focus: #79ADD4;
-    }
-  }
-  :root[data-theme="dark"]{
-    --paper:#161310;
-    --paper-raised:#211D17;
-    --paper-line:#3A3327;
-    --ink:#EDE7DA;
-    --ink-dim:#A79E8E;
-    --red:#E06A57;
-    --red-ink:#F0968660;
-    --blue:#79ADD4;
-    --blue-soft:#20303C;
-    --brass:#D2AA55;
-    --brass-soft:#3A2F19;
+    --paper:#12151C;
+    --paper-raised:#1B2029;
+    --paper-line:#2A2F3A;
+    --ink:#E8ECF2;
+    --ink-dim:#8891A0;
+    --red:#FF6B6B;
+    --red-ink:#E0574F;
+    --blue:#4FD1C5;
+    --blue-soft:#1B3634;
+    --brass:#F5B942;
+    --brass-soft:#3A2E14;
     --shadow: 0 1px 0 rgba(0,0,0,.4);
-    --focus: #79ADD4;
+    --focus: #4FD1C5;
   }
 
   *{box-sizing:border-box;}
@@ -288,7 +259,7 @@
     border-radius:10px;
   }
   table.record-table{
-    width:100%;border-collapse:collapse;font-size:13px;min-width:660px;
+    width:100%;border-collapse:collapse;font-size:13px;min-width:730px;
   }
   .record-table thead th{
     text-align:left;
@@ -408,14 +379,15 @@
 </section>
 
 <section class="record-section">
-  <h2 class="record-heading">Full Fight Record</h2>
-  <p class="record-sub">Last 20 uploads. Click a column to sort.</p>
+  <h2 class="record-heading">Last 20 Uploads</h2>
+  <p class="record-sub">Click a column to sort.</p>
   <div class="table-scroll">
     <table class="record-table" id="fight-record-table">
       <thead>
         <tr>
           <th data-key="title">Title</th>
           <th data-key="publishedAt">Released</th>
+          <th class="col-num" data-key="durationSeconds">Length</th>
           <th class="col-num" data-key="views">Views</th>
           <th class="col-num" data-key="engagedViews" title="Estimate, not a YouTube metric: views &#215; Wilson-adjusted engagement rate &mdash; roughly how many views represented real engagement rather than a passive replay">Engaged Views</th>
           <th class="col-num" data-key="likes">Likes</th>
@@ -439,6 +411,7 @@
         <tr>
           <th data-key="title">Title</th>
           <th data-key="publishedAt">Released</th>
+          <th class="col-num" data-key="durationSeconds">Length</th>
           <th class="col-num" data-key="views">Views</th>
           <th class="col-num" data-key="engagedViews" title="Estimate, not a YouTube metric: views &#215; Wilson-adjusted engagement rate &mdash; roughly how many views represented real engagement rather than a passive replay">Engaged Views</th>
           <th class="col-num" data-key="likes">Likes</th>
@@ -666,6 +639,7 @@
   function recordRowHtml(v){
     return '<td class="col-title"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener" title="'+escapeHtml(v.title)+'" data-thumb="'+v.thumbnail+'">'+escapeHtml(v.title)+'</a></td>' +
       '<td class="col-date">'+formatDate(v.publishedAt)+'</td>' +
+      '<td class="col-num">'+formatDuration(v.durationSeconds)+'</td>' +
       '<td class="col-num">'+v.views.toLocaleString()+'</td>' +
       '<td class="col-num engaged">'+v.engagedViews.toLocaleString()+'</td>' +
       '<td class="col-num">'+v.likes.toLocaleString()+'</td>' +
