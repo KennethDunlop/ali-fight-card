@@ -302,6 +302,7 @@
   }
   td.col-num.lpv{color:var(--blue);font-weight:600;}
   td.col-num.engaged{color:var(--blue);}
+  td.col-num.discuss{color:var(--red);}
   td.col-num.success{color:var(--brass);font-weight:700;}
   .thumb-preview{
     position:fixed;z-index:200;pointer-events:none;
@@ -391,6 +392,7 @@
           <th class="col-num" data-key="engagedViews" title="Estimate, not a YouTube metric: views &#215; Wilson-adjusted engagement rate &mdash; roughly how many views represented real engagement rather than a passive replay">Engaged Views</th>
           <th class="col-num" data-key="likes">Likes</th>
           <th class="col-num" data-key="comments">Comments</th>
+          <th class="col-num" data-key="commentsWilson" title="Comments alone, Wilson-adjusted (not likes) &mdash; isolates real discussion from lower-effort likes, penalised for small sample sizes">Discussion Rate</th>
           <th class="col-num" data-key="lpv">Likes / View</th>
           <th class="col-num" data-key="successScore" title="Blends age-adjusted view velocity (views &#247; days live, floored at 3) with Wilson-adjusted engagement into one 0-100 score">Success Score</th>
         </tr>
@@ -414,6 +416,24 @@
         </tr>
       </thead>
       <tbody id="hashtag-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="record-section">
+  <h2 class="record-heading">By Duration</h2>
+  <p class="record-sub">Does clip length itself predict performance? Grouped across the last 20 uploads.</p>
+  <div class="table-scroll">
+    <table class="record-table">
+      <thead>
+        <tr>
+          <th>Duration</th>
+          <th class="col-num">Videos</th>
+          <th class="col-num">Avg Views</th>
+          <th class="col-num">Avg Success Score</th>
+        </tr>
+      </thead>
+      <tbody id="duration-body"></tbody>
     </table>
   </div>
 </section>
@@ -564,6 +584,10 @@
       var copy = {};
       for(var k in v){ copy[k]=v[k]; }
       copy.engagementWilson = eng*100;
+      // Comments alone, Wilson-adjusted -- isolates real discussion from the
+      // much lower-effort action of a like, so a video that gets people
+      // talking shows up distinctly from one that just gets passive taps.
+      copy.commentsWilson = wilsonLowerBound(v.comments, v.views)*100;
       copy.viewsPerDay = vel;
       // Not a YouTube metric -- YouTube doesn't publish one. An estimate of
       // how many of the raw views represented real engagement, by scaling
@@ -619,6 +643,7 @@
         '<td class="col-num engaged">'+v.engagedViews.toLocaleString()+'</td>' +
         '<td class="col-num">'+v.likes.toLocaleString()+'</td>' +
         '<td class="col-num">'+v.comments.toLocaleString()+'</td>' +
+        '<td class="col-num discuss">'+formatRate(v.commentsWilson)+'</td>' +
         '<td class="col-num lpv">'+formatRate(likesPerView(v))+'</td>' +
         '<td class="col-num success">'+Math.round(v.successScore)+'</td>';
       recordBody.appendChild(tr);
@@ -659,6 +684,7 @@
     applyTableSort();
     renderLeaderboard(tableVideosCache);
     renderHashtags(tableVideosCache);
+    renderDuration(tableVideosCache);
   }
 
   // ---- hashtag breakdown ----
@@ -690,6 +716,39 @@
       var tr = document.createElement("tr");
       tr.innerHTML =
         '<td class="col-title"><b>'+escapeHtml(s.tag)+'</b></td>' +
+        '<td class="col-num">'+s.count+'</td>' +
+        '<td class="col-num">'+formatCount(Math.round(s.totalViews/s.count))+'</td>' +
+        '<td class="col-num success">'+Math.round(s.totalScore/s.count)+'</td>';
+      body.appendChild(tr);
+    });
+  }
+
+  // ---- duration breakdown ----
+  var DURATION_BUCKETS = ["Under 15s", "15–30s", "30–60s", "60s+"];
+  function durationBucket(sec){
+    if(sec<15) return DURATION_BUCKETS[0];
+    if(sec<30) return DURATION_BUCKETS[1];
+    if(sec<60) return DURATION_BUCKETS[2];
+    return DURATION_BUCKETS[3];
+  }
+  function renderDuration(videos){
+    var body = document.getElementById("duration-body");
+    if(!body || !videos.length) return;
+    var map = {};
+    videos.forEach(function(v){
+      var b = durationBucket(v.durationSeconds);
+      if(!map[b]) map[b] = {bucket:b, count:0, totalViews:0, totalScore:0};
+      map[b].count++;
+      map[b].totalViews += v.views;
+      map[b].totalScore += v.successScore;
+    });
+    body.innerHTML = "";
+    DURATION_BUCKETS.forEach(function(b){
+      var s = map[b];
+      if(!s) return;
+      var tr = document.createElement("tr");
+      tr.innerHTML =
+        '<td class="col-title"><b>'+escapeHtml(s.bucket)+'</b></td>' +
         '<td class="col-num">'+s.count+'</td>' +
         '<td class="col-num">'+formatCount(Math.round(s.totalViews/s.count))+'</td>' +
         '<td class="col-num success">'+Math.round(s.totalScore/s.count)+'</td>';
