@@ -360,7 +360,7 @@
       <p class="eyebrow">Tracking</p>
       <h1 id="channel-title">Ali MacKensie</h1>
       <p class="sub" id="channel-sub">loading&hellip;</p>
-      <p class="refresh-line">Auto-refreshed <time id="updated-at">&hellip;</time><span class="version" id="version-tag"></span></p>
+      <p class="refresh-line"><span id="refresh-kind">Refreshed</span> <time id="updated-at">&hellip;</time><span class="version" id="version-tag"></span></p>
     </div>
   </div>
 
@@ -902,6 +902,10 @@
     if(meta.lastUpdated){
       updatedAtEl.textContent = relTime(meta.lastUpdated) + " (" + formatDateTime(meta.lastUpdated) + ")";
       updatedAtEl.setAttribute("datetime", meta.lastUpdated);
+    }
+    var refreshKindEl = document.getElementById("refresh-kind");
+    if(refreshKindEl){
+      refreshKindEl.textContent = meta.refreshedBy === "manual" ? "Manually refreshed" : "Auto-refreshed";
     }
   }
 
