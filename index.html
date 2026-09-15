@@ -352,7 +352,7 @@
       <p class="eyebrow">Tracking</p>
       <h1 id="channel-title">Ali MacKensie</h1>
       <p class="sub" id="channel-sub">loading&hellip;</p>
-      <p class="refresh-line">Static snapshot from <time id="updated-at">&hellip;</time><span class="version">v1.3</span><span class="ask">Ask Claude to rebuild &amp; redeploy</span></p>
+      <p class="refresh-line">Static snapshot from <time id="updated-at">&hellip;</time><span class="version">v1.4</span><span class="ask">Ask Claude to rebuild &amp; redeploy</span></p>
     </div>
   </div>
 
@@ -593,6 +593,12 @@
   function formatDate(iso){
     var d = new Date(iso);
     return d.toLocaleDateString("en-GB",{day:"numeric",month:"short"});
+  }
+  function formatDateTime(iso){
+    var d = new Date(iso);
+    var datePart = d.toLocaleDateString("en-GB",{day:"numeric",month:"short"});
+    var timePart = d.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"});
+    return datePart+", "+timePart;
   }
   function relTime(iso){
     var diff = Date.now() - new Date(iso).getTime();
@@ -935,7 +941,7 @@
     bits.push('<a class="channel-link" href="'+channelUrl+'" target="_blank" rel="noopener">View channel &#8599;</a>');
     channelSub.innerHTML = bits.join(" &middot; ");
     if(meta.lastUpdated){
-      updatedAtEl.textContent = relTime(meta.lastUpdated) + " (" + formatDate(meta.lastUpdated) + ")";
+      updatedAtEl.textContent = relTime(meta.lastUpdated) + " (" + formatDateTime(meta.lastUpdated) + ")";
       updatedAtEl.setAttribute("datetime", meta.lastUpdated);
     }
   }
