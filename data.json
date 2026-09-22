@@ -1,5 +1,5 @@
 {
-  "version": "1.26",
+  "version": "1.27",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 64,
     "videoCount": 145,
-    "channelViews": 67630,
+    "channelViews": 67635,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-09-21T19:00:36.606Z",
+    "lastUpdated": "2026-09-22T07:00:15.075Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -35,6 +35,10 @@
     {
       "date": "2026-09-21",
       "subscriberCount": 64
+    },
+    {
+      "date": "2026-09-22",
+      "subscriberCount": 64
     }
   ],
   "videos": [
@@ -43,7 +47,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1388,
+      "views": 1393,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
@@ -305,7 +309,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1388,
+      "views": 1393,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
@@ -345,7 +349,7 @@
       "title": "Close Grip Larsen 110kg",
       "publishedAt": "2025-09-14T07:20:14Z",
       "thumbnail": "thumbs/WlLC5RGFbF0.jpg",
-      "views": 1277,
+      "views": 1278,
       "likes": 7,
       "comments": 0,
       "durationSeconds": 47
