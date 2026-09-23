@@ -1,5 +1,5 @@
 {
-  "version": "1.28",
+  "version": "1.29",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 64,
     "videoCount": 145,
-    "channelViews": 67636,
+    "channelViews": 67637,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-09-22T19:00:50.990Z",
+    "lastUpdated": "2026-09-23T07:00:51.887Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -38,6 +38,10 @@
     },
     {
       "date": "2026-09-22",
+      "subscriberCount": 64
+    },
+    {
+      "date": "2026-09-23",
       "subscriberCount": 64
     }
   ],
@@ -97,7 +101,7 @@
       "title": "Get huge and athletic with this 👆 #bodybuilding #strengthtraining #squats",
       "publishedAt": "2026-09-06T20:34:52Z",
       "thumbnail": "thumbs/WfAgTH43s4A.jpg",
-      "views": 18,
+      "views": 19,
       "likes": 1,
       "comments": 0,
       "durationSeconds": 53
