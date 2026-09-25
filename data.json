@@ -1,5 +1,5 @@
 {
-  "version": "1.33",
+  "version": "1.34",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -8,10 +8,10 @@
     "banner": null,
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 64,
-    "videoCount": 145,
-    "channelViews": 67647,
+    "videoCount": 146,
+    "channelViews": 67649,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-09-25T07:00:44.691Z",
+    "lastUpdated": "2026-09-25T19:00:15.018Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -54,6 +54,16 @@
     }
   ],
   "videos": [
+    {
+      "id": "3aMhE-1iG_Q",
+      "title": "Slow down to get stronger #bodybuilding",
+      "publishedAt": "2026-09-25T15:00:19Z",
+      "thumbnail": "thumbs/3aMhE-1iG_Q.jpg",
+      "views": 204,
+      "likes": 1,
+      "comments": 0,
+      "durationSeconds": 14
+    },
     {
       "id": "X-7VkejRVdo",
       "title": "#motivation #boxing #cardio",
@@ -243,16 +253,6 @@
       "likes": 3,
       "comments": 0,
       "durationSeconds": 39
-    },
-    {
-      "id": "EOcmnxLVnzU",
-      "title": "Try this minimalist upper body workout  #bodybuilding #upperbodyworkout #powerbuilding",
-      "publishedAt": "2026-07-29T22:28:23Z",
-      "thumbnail": "thumbs/EOcmnxLVnzU.jpg",
-      "views": 734,
-      "likes": 16,
-      "comments": 0,
-      "durationSeconds": 64
     }
   ],
   "longform": {
@@ -506,6 +506,7 @@
     "ROBuYD4TfOA",
     "Z_p58sO8swQ",
     "qP_8URPsFmI",
-    "UEuxT2GYLrs"
+    "UEuxT2GYLrs",
+    "3aMhE-1iG_Q"
   ]
 }
