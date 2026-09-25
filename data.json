@@ -1,5 +1,5 @@
 {
-  "version": "1.32",
+  "version": "1.33",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 64,
     "videoCount": 145,
-    "channelViews": 67645,
+    "channelViews": 67647,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-09-24T19:00:50.026Z",
+    "lastUpdated": "2026-09-25T07:00:44.691Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -46,6 +46,10 @@
     },
     {
       "date": "2026-09-24",
+      "subscriberCount": 64
+    },
+    {
+      "date": "2026-09-25",
       "subscriberCount": 64
     }
   ],
@@ -277,7 +281,7 @@
       "title": "Seated row 60kg/side",
       "publishedAt": "2025-04-06T13:22:07Z",
       "thumbnail": "thumbs/jtHInxto5wI.jpg",
-      "views": 1864,
+      "views": 1865,
       "likes": 9,
       "comments": 0,
       "durationSeconds": 33
