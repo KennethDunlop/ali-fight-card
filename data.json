@@ -1,5 +1,5 @@
 {
-  "version": "1.37",
+  "version": "1.38",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -8,10 +8,10 @@
     "banner": null,
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 64,
-    "videoCount": 146,
-    "channelViews": 67881,
+    "videoCount": 147,
+    "channelViews": 67877,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-09-27T07:01:19.766Z",
+    "lastUpdated": "2026-09-27T19:00:47.761Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -63,12 +63,22 @@
   ],
   "videos": [
     {
+      "id": "0u6ZeFp8dMU",
+      "title": "How Close to Failure Should You Train to Build Muscle?",
+      "publishedAt": "2026-09-27T15:00:26Z",
+      "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
+      "views": 4,
+      "likes": 2,
+      "comments": 0,
+      "durationSeconds": 301
+    },
+    {
       "id": "3aMhE-1iG_Q",
       "title": "Slow down to get stronger #bodybuilding",
       "publishedAt": "2026-09-25T15:00:19Z",
       "thumbnail": "thumbs/3aMhE-1iG_Q.jpg",
-      "views": 227,
-      "likes": 1,
+      "views": 230,
+      "likes": 2,
       "comments": 0,
       "durationSeconds": 14
     },
@@ -251,26 +261,16 @@
       "likes": 5,
       "comments": 0,
       "durationSeconds": 33
-    },
-    {
-      "id": "cNz3Z9qyzrM",
-      "title": "Consistency is optimal #overheadpress #bodybuilding #strengthtraining #powerbuilding",
-      "publishedAt": "2026-07-29T22:34:26Z",
-      "thumbnail": "thumbs/cNz3Z9qyzrM.jpg",
-      "views": 37,
-      "likes": 3,
-      "comments": 0,
-      "durationSeconds": 39
     }
   ],
   "longform": {
-    "id": "aT2O7KogXr0",
-    "title": "Lower Body Workout ",
-    "publishedAt": "2025-11-28T11:16:25Z",
-    "thumbnail": "thumbs/aT2O7KogXr0.jpg",
-    "views": 42,
-    "likes": 1,
-    "comments": 1,
+    "id": "0u6ZeFp8dMU",
+    "title": "How Close to Failure Should You Train to Build Muscle?",
+    "publishedAt": "2026-09-27T15:00:26Z",
+    "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
+    "views": 4,
+    "likes": 2,
+    "comments": 0,
     "durationSeconds": 301
   },
   "popularVideos": [
@@ -515,6 +515,7 @@
     "Z_p58sO8swQ",
     "qP_8URPsFmI",
     "UEuxT2GYLrs",
-    "3aMhE-1iG_Q"
+    "3aMhE-1iG_Q",
+    "0u6ZeFp8dMU"
   ]
 }
