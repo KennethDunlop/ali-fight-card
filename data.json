@@ -1,5 +1,5 @@
 {
-  "version": "1.38",
+  "version": "1.39",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 64,
     "videoCount": 147,
-    "channelViews": 67877,
+    "channelViews": 67885,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-09-27T19:00:47.761Z",
+    "lastUpdated": "2026-09-28T07:00:15.526Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -59,6 +59,10 @@
     {
       "date": "2026-09-27",
       "subscriberCount": 64
+    },
+    {
+      "date": "2026-09-28",
+      "subscriberCount": 64
     }
   ],
   "videos": [
@@ -67,8 +71,8 @@
       "title": "How Close to Failure Should You Train to Build Muscle?",
       "publishedAt": "2026-09-27T15:00:26Z",
       "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-      "views": 4,
-      "likes": 2,
+      "views": 29,
+      "likes": 4,
       "comments": 0,
       "durationSeconds": 301
     },
@@ -77,7 +81,7 @@
       "title": "Slow down to get stronger #bodybuilding",
       "publishedAt": "2026-09-25T15:00:19Z",
       "thumbnail": "thumbs/3aMhE-1iG_Q.jpg",
-      "views": 230,
+      "views": 231,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 14
@@ -268,8 +272,8 @@
     "title": "How Close to Failure Should You Train to Build Muscle?",
     "publishedAt": "2026-09-27T15:00:26Z",
     "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-    "views": 4,
-    "likes": 2,
+    "views": 29,
+    "likes": 4,
     "comments": 0,
     "durationSeconds": 301
   },
