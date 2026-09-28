@@ -1,5 +1,5 @@
 {
-  "version": "1.39",
+  "version": "1.40",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -7,11 +7,11 @@
     "avatarLarge": "thumbs/avatar-large.jpg",
     "banner": null,
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
-    "subscriberCount": 64,
+    "subscriberCount": 65,
     "videoCount": 147,
     "channelViews": 67885,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-09-28T07:00:15.526Z",
+    "lastUpdated": "2026-09-28T19:00:45.664Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -62,7 +62,7 @@
     },
     {
       "date": "2026-09-28",
-      "subscriberCount": 64
+      "subscriberCount": 65
     }
   ],
   "videos": [
@@ -71,9 +71,9 @@
       "title": "How Close to Failure Should You Train to Build Muscle?",
       "publishedAt": "2026-09-27T15:00:26Z",
       "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-      "views": 29,
-      "likes": 4,
-      "comments": 0,
+      "views": 32,
+      "likes": 7,
+      "comments": 2,
       "durationSeconds": 301
     },
     {
@@ -91,7 +91,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1394,
+      "views": 1398,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
@@ -101,7 +101,7 @@
       "title": "Effective reps #bodybuilding",
       "publishedAt": "2026-09-10T15:06:39Z",
       "thumbnail": "thumbs/OouspRxAKjY.jpg",
-      "views": 563,
+      "views": 564,
       "likes": 4,
       "comments": 1,
       "durationSeconds": 35
@@ -272,9 +272,9 @@
     "title": "How Close to Failure Should You Train to Build Muscle?",
     "publishedAt": "2026-09-27T15:00:26Z",
     "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-    "views": 29,
-    "likes": 4,
-    "comments": 0,
+    "views": 32,
+    "likes": 7,
+    "comments": 2,
     "durationSeconds": 301
   },
   "popularVideos": [
@@ -333,7 +333,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1394,
+      "views": 1398,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
