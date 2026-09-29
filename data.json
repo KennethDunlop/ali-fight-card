@@ -1,5 +1,5 @@
 {
-  "version": "1.40",
+  "version": "1.41",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 65,
     "videoCount": 147,
-    "channelViews": 67885,
+    "channelViews": 67929,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-09-28T19:00:45.664Z",
+    "lastUpdated": "2026-09-29T07:00:45.851Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -63,6 +63,10 @@
     {
       "date": "2026-09-28",
       "subscriberCount": 65
+    },
+    {
+      "date": "2026-09-29",
+      "subscriberCount": 65
     }
   ],
   "videos": [
@@ -71,8 +75,8 @@
       "title": "How Close to Failure Should You Train to Build Muscle?",
       "publishedAt": "2026-09-27T15:00:26Z",
       "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-      "views": 32,
-      "likes": 7,
+      "views": 87,
+      "likes": 10,
       "comments": 2,
       "durationSeconds": 301
     },
@@ -272,8 +276,8 @@
     "title": "How Close to Failure Should You Train to Build Muscle?",
     "publishedAt": "2026-09-27T15:00:26Z",
     "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-    "views": 32,
-    "likes": 7,
+    "views": 87,
+    "likes": 10,
     "comments": 2,
     "durationSeconds": 301
   },
@@ -423,7 +427,7 @@
       "title": "The best quad building squat for tall lifters #bodybuilding #squats #legday",
       "publishedAt": "2026-07-22T19:31:43Z",
       "thumbnail": "thumbs/ichw5Qjcw7M.jpg",
-      "views": 1207,
+      "views": 1209,
       "likes": 8,
       "comments": 0,
       "durationSeconds": 17
