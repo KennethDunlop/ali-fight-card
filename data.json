@@ -1,5 +1,5 @@
 {
-  "version": "1.43",
+  "version": "1.44",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -11,7 +11,7 @@
     "videoCount": 147,
     "channelViews": 67929,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-09-30T07:00:26.680Z",
+    "lastUpdated": "2026-09-30T19:00:44.087Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -79,7 +79,7 @@
       "title": "How Close to Failure Should You Train to Build Muscle?",
       "publishedAt": "2026-09-27T15:00:26Z",
       "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-      "views": 143,
+      "views": 154,
       "likes": 10,
       "comments": 2,
       "durationSeconds": 301
@@ -280,7 +280,7 @@
     "title": "How Close to Failure Should You Train to Build Muscle?",
     "publishedAt": "2026-09-27T15:00:26Z",
     "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-    "views": 143,
+    "views": 154,
     "likes": 10,
     "comments": 2,
     "durationSeconds": 301
@@ -407,6 +407,16 @@
       "durationSeconds": 27
     },
     {
+      "id": "ichw5Qjcw7M",
+      "title": "The best quad building squat for tall lifters #bodybuilding #squats #legday",
+      "publishedAt": "2026-07-22T19:31:43Z",
+      "thumbnail": "thumbs/ichw5Qjcw7M.jpg",
+      "views": 1211,
+      "likes": 8,
+      "comments": 0,
+      "durationSeconds": 17
+    },
+    {
       "id": "vKWXtaHXSho",
       "title": "200kg Pause Squat",
       "publishedAt": "2025-12-03T09:43:39Z",
@@ -425,16 +435,6 @@
       "likes": 5,
       "comments": 0,
       "durationSeconds": 33
-    },
-    {
-      "id": "ichw5Qjcw7M",
-      "title": "The best quad building squat for tall lifters #bodybuilding #squats #legday",
-      "publishedAt": "2026-07-22T19:31:43Z",
-      "thumbnail": "thumbs/ichw5Qjcw7M.jpg",
-      "views": 1209,
-      "likes": 8,
-      "comments": 0,
-      "durationSeconds": 17
     },
     {
       "id": "ZjWfRFn5XAI",
