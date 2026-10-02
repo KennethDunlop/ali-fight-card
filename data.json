@@ -1,5 +1,5 @@
 {
-  "version": "1.46",
+  "version": "1.47",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 65,
     "videoCount": 147,
-    "channelViews": 68136,
+    "channelViews": 68139,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-01T19:00:53.781Z",
+    "lastUpdated": "2026-10-02T07:00:18.454Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -75,6 +75,10 @@
     {
       "date": "2026-10-01",
       "subscriberCount": 65
+    },
+    {
+      "date": "2026-10-02",
+      "subscriberCount": 65
     }
   ],
   "videos": [
@@ -83,7 +87,7 @@
       "title": "How Close to Failure Should You Train to Build Muscle?",
       "publishedAt": "2026-09-27T15:00:26Z",
       "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-      "views": 237,
+      "views": 236,
       "likes": 10,
       "comments": 2,
       "durationSeconds": 301
@@ -284,7 +288,7 @@
     "title": "How Close to Failure Should You Train to Build Muscle?",
     "publishedAt": "2026-09-27T15:00:26Z",
     "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-    "views": 237,
+    "views": 236,
     "likes": 10,
     "comments": 2,
     "durationSeconds": 301
