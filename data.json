@@ -1,5 +1,5 @@
 {
-  "version": "1.51",
+  "version": "1.52",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -8,10 +8,10 @@
     "banner": null,
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 65,
-    "videoCount": 147,
-    "channelViews": 68145,
+    "videoCount": 148,
+    "channelViews": 68149,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-04T07:01:28.187Z",
+    "lastUpdated": "2026-10-04T19:00:23.742Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -91,11 +91,21 @@
   ],
   "videos": [
     {
+      "id": "ciPaln0z-Qs",
+      "title": "How to Stay Consistent With Your Training",
+      "publishedAt": "2026-10-04T13:00:39Z",
+      "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
+      "views": 2,
+      "likes": 1,
+      "comments": 0,
+      "durationSeconds": 452
+    },
+    {
       "id": "0u6ZeFp8dMU",
       "title": "How Close to Failure Should You Train to Build Muscle?",
       "publishedAt": "2026-09-27T15:00:26Z",
       "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-      "views": 245,
+      "views": 246,
       "likes": 10,
       "comments": 2,
       "durationSeconds": 301
@@ -279,27 +289,17 @@
       "likes": 13,
       "comments": 0,
       "durationSeconds": 53
-    },
-    {
-      "id": "mgDptxpO0Ac",
-      "title": "If you can't add reps add weight #bodybuilding #pullups #strengthtraining",
-      "publishedAt": "2026-07-31T20:43:49Z",
-      "thumbnail": "thumbs/mgDptxpO0Ac.jpg",
-      "views": 1210,
-      "likes": 5,
-      "comments": 0,
-      "durationSeconds": 33
     }
   ],
   "longform": {
-    "id": "0u6ZeFp8dMU",
-    "title": "How Close to Failure Should You Train to Build Muscle?",
-    "publishedAt": "2026-09-27T15:00:26Z",
-    "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-    "views": 245,
-    "likes": 10,
-    "comments": 2,
-    "durationSeconds": 301
+    "id": "ciPaln0z-Qs",
+    "title": "How to Stay Consistent With Your Training",
+    "publishedAt": "2026-10-04T13:00:39Z",
+    "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
+    "views": 2,
+    "likes": 1,
+    "comments": 0,
+    "durationSeconds": 452
   },
   "popularVideos": [
     {
@@ -427,7 +427,7 @@
       "title": "The best quad building squat for tall lifters #bodybuilding #squats #legday",
       "publishedAt": "2026-07-22T19:31:43Z",
       "thumbnail": "thumbs/ichw5Qjcw7M.jpg",
-      "views": 1211,
+      "views": 1212,
       "likes": 8,
       "comments": 0,
       "durationSeconds": 17
@@ -544,6 +544,7 @@
     "qP_8URPsFmI",
     "UEuxT2GYLrs",
     "3aMhE-1iG_Q",
-    "0u6ZeFp8dMU"
+    "0u6ZeFp8dMU",
+    "ciPaln0z-Qs"
   ]
 }
