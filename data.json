@@ -1,5 +1,5 @@
 {
-  "version": "1.53",
+  "version": "1.54",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 65,
     "videoCount": 148,
-    "channelViews": 68149,
+    "channelViews": 68152,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-04T19:01:20.747Z",
+    "lastUpdated": "2026-10-05T07:00:15.346Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -87,6 +87,10 @@
     {
       "date": "2026-10-04",
       "subscriberCount": 65
+    },
+    {
+      "date": "2026-10-05",
+      "subscriberCount": 65
     }
   ],
   "videos": [
@@ -95,7 +99,7 @@
       "title": "How to Stay Consistent With Your Training",
       "publishedAt": "2026-10-04T13:00:39Z",
       "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-      "views": 4,
+      "views": 6,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 452
@@ -105,7 +109,7 @@
       "title": "How Close to Failure Should You Train to Build Muscle?",
       "publishedAt": "2026-09-27T15:00:26Z",
       "thumbnail": "thumbs/0u6ZeFp8dMU.jpg",
-      "views": 246,
+      "views": 248,
       "likes": 10,
       "comments": 2,
       "durationSeconds": 301
@@ -296,7 +300,7 @@
     "title": "How to Stay Consistent With Your Training",
     "publishedAt": "2026-10-04T13:00:39Z",
     "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-    "views": 4,
+    "views": 6,
     "likes": 2,
     "comments": 0,
     "durationSeconds": 452
