@@ -1,5 +1,5 @@
 {
-  "version": "1.55",
+  "version": "1.56",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -7,11 +7,11 @@
     "avatarLarge": "thumbs/avatar-large.jpg",
     "banner": null,
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
-    "subscriberCount": 65,
-    "videoCount": 148,
-    "channelViews": 68161,
+    "subscriberCount": 66,
+    "videoCount": 149,
+    "channelViews": 68166,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-05T19:00:42.167Z",
+    "lastUpdated": "2026-10-06T07:00:51.459Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -91,15 +91,29 @@
     {
       "date": "2026-10-05",
       "subscriberCount": 65
+    },
+    {
+      "date": "2026-10-06",
+      "subscriberCount": 66
     }
   ],
   "videos": [
+    {
+      "id": "SPxj0LjV78A",
+      "title": "Overpowered Exercises #bodybuilding #strengthtraining",
+      "publishedAt": "2026-10-05T20:25:53Z",
+      "thumbnail": "thumbs/SPxj0LjV78A.jpg",
+      "views": 532,
+      "likes": 5,
+      "comments": 0,
+      "durationSeconds": 51
+    },
     {
       "id": "ciPaln0z-Qs",
       "title": "How to Stay Consistent With Your Training",
       "publishedAt": "2026-10-04T13:00:39Z",
       "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-      "views": 31,
+      "views": 85,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 452
@@ -129,7 +143,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1398,
+      "views": 1400,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
@@ -283,16 +297,6 @@
       "likes": 9,
       "comments": 1,
       "durationSeconds": 22
-    },
-    {
-      "id": "HuugFvIE02E",
-      "title": "How to actually grow #bodybuilding #strengthtraining #powerbuilding",
-      "publishedAt": "2026-08-01T13:02:00Z",
-      "thumbnail": "thumbs/HuugFvIE02E.jpg",
-      "views": 657,
-      "likes": 13,
-      "comments": 0,
-      "durationSeconds": 53
     }
   ],
   "longform": {
@@ -300,7 +304,7 @@
     "title": "How to Stay Consistent With Your Training",
     "publishedAt": "2026-10-04T13:00:39Z",
     "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-    "views": 31,
+    "views": 85,
     "likes": 2,
     "comments": 0,
     "durationSeconds": 452
@@ -361,7 +365,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1398,
+      "views": 1400,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
@@ -549,6 +553,7 @@
     "UEuxT2GYLrs",
     "3aMhE-1iG_Q",
     "0u6ZeFp8dMU",
-    "ciPaln0z-Qs"
+    "ciPaln0z-Qs",
+    "SPxj0LjV78A"
   ]
 }
