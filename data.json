@@ -1,5 +1,5 @@
 {
-  "version": "1.58",
+  "version": "1.59",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -8,10 +8,10 @@
     "banner": null,
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 67,
-    "videoCount": 150,
-    "channelViews": 68835,
+    "videoCount": 151,
+    "channelViews": 68937,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-07T07:00:11.572Z",
+    "lastUpdated": "2026-10-07T19:00:20.472Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -103,11 +103,21 @@
   ],
   "videos": [
     {
+      "id": "esr2XNIaXNI",
+      "title": "Dumb people are big and strong #bodybuilding",
+      "publishedAt": "2026-10-07T18:33:26Z",
+      "thumbnail": "thumbs/esr2XNIaXNI.jpg",
+      "views": 7,
+      "likes": 3,
+      "comments": 0,
+      "durationSeconds": 52
+    },
+    {
       "id": "K4qspLMm-AQ",
       "title": "Get the most out of the least amount of training  #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-06T16:59:16Z",
       "thumbnail": "thumbs/K4qspLMm-AQ.jpg",
-      "views": 14,
+      "views": 20,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 43
@@ -117,7 +127,7 @@
       "title": "Overpowered Exercises #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-05T20:25:53Z",
       "thumbnail": "thumbs/SPxj0LjV78A.jpg",
-      "views": 613,
+      "views": 754,
       "likes": 9,
       "comments": 0,
       "durationSeconds": 51
@@ -127,7 +137,7 @@
       "title": "How to Stay Consistent With Your Training",
       "publishedAt": "2026-10-04T13:00:39Z",
       "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-      "views": 148,
+      "views": 161,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 452
@@ -291,16 +301,6 @@
       "likes": 2,
       "comments": 0,
       "durationSeconds": 73
-    },
-    {
-      "id": "QG8PRISEots",
-      "title": "Full Leg Day #bodybuilding #legday #quads",
-      "publishedAt": "2026-08-03T19:56:27Z",
-      "thumbnail": "thumbs/QG8PRISEots.jpg",
-      "views": 822,
-      "likes": 5,
-      "comments": 0,
-      "durationSeconds": 48
     }
   ],
   "longform": {
@@ -308,7 +308,7 @@
     "title": "How to Stay Consistent With Your Training",
     "publishedAt": "2026-10-04T13:00:39Z",
     "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-    "views": 148,
+    "views": 161,
     "likes": 3,
     "comments": 0,
     "durationSeconds": 452
@@ -559,6 +559,7 @@
     "0u6ZeFp8dMU",
     "ciPaln0z-Qs",
     "SPxj0LjV78A",
-    "K4qspLMm-AQ"
+    "K4qspLMm-AQ",
+    "esr2XNIaXNI"
   ]
 }
