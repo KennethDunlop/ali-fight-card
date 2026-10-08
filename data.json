@@ -1,5 +1,5 @@
 {
-  "version": "1.59",
+  "version": "1.60",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -8,10 +8,10 @@
     "banner": null,
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 67,
-    "videoCount": 151,
-    "channelViews": 68937,
+    "videoCount": 152,
+    "channelViews": 69034,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-07T19:00:20.472Z",
+    "lastUpdated": "2026-10-08T07:00:08.892Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -99,15 +99,29 @@
     {
       "date": "2026-10-07",
       "subscriberCount": 67
+    },
+    {
+      "date": "2026-10-08",
+      "subscriberCount": 67
     }
   ],
   "videos": [
+    {
+      "id": "X5H4Y5C9QW0",
+      "title": "The gym is easy",
+      "publishedAt": "2026-10-07T19:56:05Z",
+      "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
+      "views": 5,
+      "likes": 0,
+      "comments": 0,
+      "durationSeconds": 678
+    },
     {
       "id": "esr2XNIaXNI",
       "title": "Dumb people are big and strong #bodybuilding",
       "publishedAt": "2026-10-07T18:33:26Z",
       "thumbnail": "thumbs/esr2XNIaXNI.jpg",
-      "views": 7,
+      "views": 25,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 52
@@ -117,7 +131,7 @@
       "title": "Get the most out of the least amount of training  #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-06T16:59:16Z",
       "thumbnail": "thumbs/K4qspLMm-AQ.jpg",
-      "views": 20,
+      "views": 21,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 43
@@ -127,7 +141,7 @@
       "title": "Overpowered Exercises #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-05T20:25:53Z",
       "thumbnail": "thumbs/SPxj0LjV78A.jpg",
-      "views": 754,
+      "views": 778,
       "likes": 9,
       "comments": 0,
       "durationSeconds": 51
@@ -137,7 +151,7 @@
       "title": "How to Stay Consistent With Your Training",
       "publishedAt": "2026-10-04T13:00:39Z",
       "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-      "views": 161,
+      "views": 177,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 452
@@ -291,27 +305,17 @@
       "likes": 8,
       "comments": 0,
       "durationSeconds": 60
-    },
-    {
-      "id": "QUYrF5XgYAI",
-      "title": "RDL 150kg #bodybuilding #legday #deadlift",
-      "publishedAt": "2026-08-05T08:40:37Z",
-      "thumbnail": "thumbs/QUYrF5XgYAI.jpg",
-      "views": 96,
-      "likes": 2,
-      "comments": 0,
-      "durationSeconds": 73
     }
   ],
   "longform": {
-    "id": "ciPaln0z-Qs",
-    "title": "How to Stay Consistent With Your Training",
-    "publishedAt": "2026-10-04T13:00:39Z",
-    "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-    "views": 161,
-    "likes": 3,
+    "id": "X5H4Y5C9QW0",
+    "title": "The gym is easy",
+    "publishedAt": "2026-10-07T19:56:05Z",
+    "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
+    "views": 5,
+    "likes": 0,
     "comments": 0,
-    "durationSeconds": 452
+    "durationSeconds": 678
   },
   "popularVideos": [
     {
@@ -439,7 +443,7 @@
       "title": "The best quad building squat for tall lifters #bodybuilding #squats #legday",
       "publishedAt": "2026-07-22T19:31:43Z",
       "thumbnail": "thumbs/ichw5Qjcw7M.jpg",
-      "views": 1212,
+      "views": 1213,
       "likes": 8,
       "comments": 0,
       "durationSeconds": 17
@@ -560,6 +564,7 @@
     "ciPaln0z-Qs",
     "SPxj0LjV78A",
     "K4qspLMm-AQ",
-    "esr2XNIaXNI"
+    "esr2XNIaXNI",
+    "X5H4Y5C9QW0"
   ]
 }
