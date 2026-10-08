@@ -1,5 +1,5 @@
 {
-  "version": "1.60",
+  "version": "1.61",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 67,
     "videoCount": 152,
-    "channelViews": 69034,
+    "channelViews": 69135,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-08T07:00:08.892Z",
+    "lastUpdated": "2026-10-08T19:00:43.879Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -111,7 +111,7 @@
       "title": "The gym is easy",
       "publishedAt": "2026-10-07T19:56:05Z",
       "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-      "views": 5,
+      "views": 24,
       "likes": 0,
       "comments": 0,
       "durationSeconds": 678
@@ -121,7 +121,7 @@
       "title": "Dumb people are big and strong #bodybuilding",
       "publishedAt": "2026-10-07T18:33:26Z",
       "thumbnail": "thumbs/esr2XNIaXNI.jpg",
-      "views": 25,
+      "views": 32,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 52
@@ -131,7 +131,7 @@
       "title": "Get the most out of the least amount of training  #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-06T16:59:16Z",
       "thumbnail": "thumbs/K4qspLMm-AQ.jpg",
-      "views": 21,
+      "views": 20,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 43
@@ -141,7 +141,7 @@
       "title": "Overpowered Exercises #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-05T20:25:53Z",
       "thumbnail": "thumbs/SPxj0LjV78A.jpg",
-      "views": 778,
+      "views": 780,
       "likes": 9,
       "comments": 0,
       "durationSeconds": 51
@@ -151,7 +151,7 @@
       "title": "How to Stay Consistent With Your Training",
       "publishedAt": "2026-10-04T13:00:39Z",
       "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-      "views": 177,
+      "views": 179,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 452
@@ -181,8 +181,8 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1400,
-      "likes": 3,
+      "views": 1402,
+      "likes": 4,
       "comments": 0,
       "durationSeconds": 4
     },
@@ -191,7 +191,7 @@
       "title": "Effective reps #bodybuilding",
       "publishedAt": "2026-09-10T15:06:39Z",
       "thumbnail": "thumbs/OouspRxAKjY.jpg",
-      "views": 564,
+      "views": 565,
       "likes": 4,
       "comments": 1,
       "durationSeconds": 35
@@ -241,8 +241,8 @@
       "title": "Size Vs Strength #bodybuilding #strengthtraining #hypertrophy",
       "publishedAt": "2026-09-02T07:38:15Z",
       "thumbnail": "thumbs/oEqMfUJyyzg.jpg",
-      "views": 338,
-      "likes": 4,
+      "views": 339,
+      "likes": 5,
       "comments": 0,
       "durationSeconds": 38
     },
@@ -312,7 +312,7 @@
     "title": "The gym is easy",
     "publishedAt": "2026-10-07T19:56:05Z",
     "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-    "views": 5,
+    "views": 24,
     "likes": 0,
     "comments": 0,
     "durationSeconds": 678
@@ -373,8 +373,8 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1400,
-      "likes": 3,
+      "views": 1402,
+      "likes": 4,
       "comments": 0,
       "durationSeconds": 4
     },
