@@ -1,5 +1,5 @@
 {
-  "version": "1.61",
+  "version": "1.62",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 67,
     "videoCount": 152,
-    "channelViews": 69135,
+    "channelViews": 69166,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-08T19:00:43.879Z",
+    "lastUpdated": "2026-10-09T07:00:41.195Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -103,6 +103,10 @@
     {
       "date": "2026-10-08",
       "subscriberCount": 67
+    },
+    {
+      "date": "2026-10-09",
+      "subscriberCount": 67
     }
   ],
   "videos": [
@@ -111,8 +115,8 @@
       "title": "The gym is easy",
       "publishedAt": "2026-10-07T19:56:05Z",
       "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-      "views": 24,
-      "likes": 0,
+      "views": 27,
+      "likes": 1,
       "comments": 0,
       "durationSeconds": 678
     },
@@ -141,7 +145,7 @@
       "title": "Overpowered Exercises #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-05T20:25:53Z",
       "thumbnail": "thumbs/SPxj0LjV78A.jpg",
-      "views": 780,
+      "views": 782,
       "likes": 9,
       "comments": 0,
       "durationSeconds": 51
@@ -151,7 +155,7 @@
       "title": "How to Stay Consistent With Your Training",
       "publishedAt": "2026-10-04T13:00:39Z",
       "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-      "views": 179,
+      "views": 180,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 452
@@ -312,8 +316,8 @@
     "title": "The gym is easy",
     "publishedAt": "2026-10-07T19:56:05Z",
     "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-    "views": 24,
-    "likes": 0,
+    "views": 27,
+    "likes": 1,
     "comments": 0,
     "durationSeconds": 678
   },
