@@ -1,5 +1,5 @@
 {
-  "version": "1.70",
+  "version": "1.71",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -11,7 +11,7 @@
     "videoCount": 152,
     "channelViews": 69250,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-13T07:01:03.323Z",
+    "lastUpdated": "2026-10-13T19:00:41.638Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -131,7 +131,7 @@
       "title": "The gym is easy",
       "publishedAt": "2026-10-07T19:56:05Z",
       "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-      "views": 33,
+      "views": 34,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 678
@@ -171,7 +171,7 @@
       "title": "How to Stay Consistent With Your Training",
       "publishedAt": "2026-10-04T13:00:39Z",
       "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-      "views": 211,
+      "views": 220,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 452
@@ -332,7 +332,7 @@
     "title": "The gym is easy",
     "publishedAt": "2026-10-07T19:56:05Z",
     "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-    "views": 33,
+    "views": 34,
     "likes": 2,
     "comments": 0,
     "durationSeconds": 678
