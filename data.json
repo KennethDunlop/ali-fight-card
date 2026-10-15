@@ -1,5 +1,5 @@
 {
-  "version": "1.73",
+  "version": "1.74",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 68,
     "videoCount": 152,
-    "channelViews": 69267,
+    "channelViews": 69299,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-14T19:01:01.176Z",
+    "lastUpdated": "2026-10-15T07:00:16.835Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -126,6 +126,10 @@
     },
     {
       "date": "2026-10-14",
+      "subscriberCount": 68
+    },
+    {
+      "date": "2026-10-15",
       "subscriberCount": 68
     }
   ],
