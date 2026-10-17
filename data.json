@@ -1,5 +1,5 @@
 {
-  "version": "1.77",
+  "version": "1.78",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -11,7 +11,7 @@
     "videoCount": 152,
     "channelViews": 69299,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-16T19:00:17.399Z",
+    "lastUpdated": "2026-10-17T07:00:04.372Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -135,6 +135,10 @@
     {
       "date": "2026-10-16",
       "subscriberCount": 68
+    },
+    {
+      "date": "2026-10-17",
+      "subscriberCount": 68
     }
   ],
   "videos": [
@@ -213,7 +217,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1403,
+      "views": 1404,
       "likes": 4,
       "comments": 0,
       "durationSeconds": 4
@@ -405,7 +409,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1403,
+      "views": 1404,
       "likes": 4,
       "comments": 0,
       "durationSeconds": 4
