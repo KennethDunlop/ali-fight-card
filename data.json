@@ -1,5 +1,5 @@
 {
-  "version": "1.81",
+  "version": "1.82",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -11,7 +11,7 @@
     "videoCount": 152,
     "channelViews": 69305,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-18T19:00:04.196Z",
+    "lastUpdated": "2026-10-19T07:00:04.401Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -142,6 +142,10 @@
     },
     {
       "date": "2026-10-18",
+      "subscriberCount": 68
+    },
+    {
+      "date": "2026-10-19",
       "subscriberCount": 68
     }
   ],
@@ -373,7 +377,7 @@
       "title": "Seated row 60kg/side",
       "publishedAt": "2025-04-06T13:22:07Z",
       "thumbnail": "thumbs/jtHInxto5wI.jpg",
-      "views": 1865,
+      "views": 1867,
       "likes": 9,
       "comments": 0,
       "durationSeconds": 33
@@ -473,7 +477,7 @@
       "title": "T-bar rows 100KG",
       "publishedAt": "2025-12-01T08:53:00Z",
       "thumbnail": "thumbs/__5DzFj4gRU.jpg",
-      "views": 1260,
+      "views": 1262,
       "likes": 8,
       "comments": 0,
       "durationSeconds": 27
