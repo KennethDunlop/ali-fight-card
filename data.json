@@ -1,5 +1,5 @@
 {
-  "version": "1.86",
+  "version": "1.87",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -11,7 +11,7 @@
     "videoCount": 152,
     "channelViews": 69310,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-21T07:00:04.387Z",
+    "lastUpdated": "2026-10-21T19:00:04.429Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -163,7 +163,7 @@
       "title": "The gym is easy",
       "publishedAt": "2026-10-07T19:56:05Z",
       "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-      "views": 35,
+      "views": 36,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 678
@@ -364,7 +364,7 @@
     "title": "The gym is easy",
     "publishedAt": "2026-10-07T19:56:05Z",
     "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-    "views": 35,
+    "views": 36,
     "likes": 2,
     "comments": 0,
     "durationSeconds": 678
