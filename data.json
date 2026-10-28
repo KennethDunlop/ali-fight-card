@@ -1,5 +1,5 @@
 {
-  "version": "1.100",
+  "version": "1.101",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 68,
     "videoCount": 152,
-    "channelViews": 69321,
+    "channelViews": 69323,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-28T07:00:06.773Z",
+    "lastUpdated": "2026-10-28T19:00:06.551Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -201,7 +201,7 @@
       "title": "Dumb people are big and strong #bodybuilding",
       "publishedAt": "2026-10-07T18:33:26Z",
       "thumbnail": "thumbs/esr2XNIaXNI.jpg",
-      "views": 39,
+      "views": 40,
       "likes": 4,
       "comments": 0,
       "durationSeconds": 52
@@ -271,7 +271,7 @@
       "title": "Effective reps #bodybuilding",
       "publishedAt": "2026-09-10T15:06:39Z",
       "thumbnail": "thumbs/OouspRxAKjY.jpg",
-      "views": 567,
+      "views": 569,
       "likes": 4,
       "comments": 1,
       "durationSeconds": 35
