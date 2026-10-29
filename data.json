@@ -1,5 +1,5 @@
 {
-  "version": "1.101",
+  "version": "1.102",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 68,
     "videoCount": 152,
-    "channelViews": 69323,
+    "channelViews": 69333,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-28T19:00:06.551Z",
+    "lastUpdated": "2026-10-29T07:00:51.097Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -183,6 +183,10 @@
     {
       "date": "2026-10-28",
       "subscriberCount": 68
+    },
+    {
+      "date": "2026-10-29",
+      "subscriberCount": 68
     }
   ],
   "videos": [
@@ -251,7 +255,7 @@
       "title": "Slow down to get stronger #bodybuilding",
       "publishedAt": "2026-09-25T15:00:19Z",
       "thumbnail": "thumbs/3aMhE-1iG_Q.jpg",
-      "views": 233,
+      "views": 242,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 14
