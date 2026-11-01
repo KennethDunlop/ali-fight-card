@@ -1,5 +1,5 @@
 {
-  "version": "1.107",
+  "version": "1.108",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 68,
     "videoCount": 152,
-    "channelViews": 69355,
+    "channelViews": 69357,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-10-31T19:00:44.609Z",
+    "lastUpdated": "2026-11-01T07:00:42.550Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -194,6 +194,10 @@
     },
     {
       "date": "2026-10-31",
+      "subscriberCount": 68
+    },
+    {
+      "date": "2026-11-01",
       "subscriberCount": 68
     }
   ],
@@ -535,7 +539,7 @@
       "title": "The best quad building squat for tall lifters #bodybuilding #squats #legday",
       "publishedAt": "2026-07-22T19:31:43Z",
       "thumbnail": "thumbs/ichw5Qjcw7M.jpg",
-      "views": 1214,
+      "views": 1216,
       "likes": 8,
       "comments": 0,
       "durationSeconds": 17
