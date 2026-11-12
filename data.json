@@ -1,5 +1,5 @@
 {
-  "version": "1.129",
+  "version": "1.130",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 68,
     "videoCount": 152,
-    "channelViews": 69364,
+    "channelViews": 69367,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-11-11T19:00:20.306Z",
+    "lastUpdated": "2026-11-12T07:00:20.291Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -239,6 +239,10 @@
     {
       "date": "2026-11-11",
       "subscriberCount": 68
+    },
+    {
+      "date": "2026-11-12",
+      "subscriberCount": 68
     }
   ],
   "videos": [
@@ -347,7 +351,7 @@
       "title": "Add Weight to the Bar #bodybuilding",
       "publishedAt": "2026-09-08T15:17:35Z",
       "thumbnail": "thumbs/Sg6p5AlnPvM.jpg",
-      "views": 389,
+      "views": 390,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 17
