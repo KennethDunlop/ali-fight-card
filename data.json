@@ -1,5 +1,5 @@
 {
-  "version": "1.137",
+  "version": "1.138",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -11,7 +11,7 @@
     "videoCount": 152,
     "channelViews": 69369,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-11-15T19:00:28.169Z",
+    "lastUpdated": "2026-11-16T07:00:25.349Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -254,6 +254,10 @@
     },
     {
       "date": "2026-11-15",
+      "subscriberCount": 68
+    },
+    {
+      "date": "2026-11-16",
       "subscriberCount": 68
     }
   ],
@@ -535,7 +539,7 @@
       "title": "14 Pull-ups 100kg bodyweight",
       "publishedAt": "2025-07-31T07:25:08Z",
       "thumbnail": "thumbs/7HFKg0K9jyQ.jpg",
-      "views": 1350,
+      "views": 1352,
       "likes": 7,
       "comments": 0,
       "durationSeconds": 61
