@@ -1,5 +1,5 @@
 {
-  "version": "1.151",
+  "version": "1.152",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 68,
     "videoCount": 152,
-    "channelViews": 69385,
+    "channelViews": 69384,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-11-22T19:00:56.121Z",
+    "lastUpdated": "2026-11-23T07:00:55.453Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -283,6 +283,10 @@
     {
       "date": "2026-11-22",
       "subscriberCount": 68
+    },
+    {
+      "date": "2026-11-23",
+      "subscriberCount": 68
     }
   ],
   "videos": [
@@ -503,7 +507,7 @@
       "title": "120kg high pull",
       "publishedAt": "2025-06-27T14:31:08Z",
       "thumbnail": "thumbs/NPgoNuToxOE.jpg",
-      "views": 2008,
+      "views": 2007,
       "likes": 8,
       "comments": 0,
       "durationSeconds": 18
