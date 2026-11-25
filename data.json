@@ -1,5 +1,5 @@
 {
-  "version": "1.155",
+  "version": "1.156",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -11,7 +11,7 @@
     "videoCount": 152,
     "channelViews": 69384,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-11-24T19:00:15.824Z",
+    "lastUpdated": "2026-11-25T07:00:21.475Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -291,6 +291,10 @@
     {
       "date": "2026-11-24",
       "subscriberCount": 68
+    },
+    {
+      "date": "2026-11-25",
+      "subscriberCount": 68
     }
   ],
   "videos": [
@@ -309,7 +313,7 @@
       "title": "Dumb people are big and strong #bodybuilding",
       "publishedAt": "2026-10-07T18:33:26Z",
       "thumbnail": "thumbs/esr2XNIaXNI.jpg",
-      "views": 41,
+      "views": 42,
       "likes": 4,
       "comments": 0,
       "durationSeconds": 52
@@ -319,7 +323,7 @@
       "title": "Get the most out of the least amount of training  #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-06T16:59:16Z",
       "thumbnail": "thumbs/K4qspLMm-AQ.jpg",
-      "views": 25,
+      "views": 26,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 43
@@ -329,7 +333,7 @@
       "title": "Overpowered Exercises #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-05T20:25:53Z",
       "thumbnail": "thumbs/SPxj0LjV78A.jpg",
-      "views": 787,
+      "views": 788,
       "likes": 8,
       "comments": 0,
       "durationSeconds": 51
@@ -359,7 +363,7 @@
       "title": "Slow down to get stronger #bodybuilding",
       "publishedAt": "2026-09-25T15:00:19Z",
       "thumbnail": "thumbs/3aMhE-1iG_Q.jpg",
-      "views": 242,
+      "views": 244,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 14
@@ -369,8 +373,8 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1410,
-      "likes": 4,
+      "views": 1414,
+      "likes": 3,
       "comments": 0,
       "durationSeconds": 4
     },
@@ -379,7 +383,7 @@
       "title": "Effective reps #bodybuilding",
       "publishedAt": "2026-09-10T15:06:39Z",
       "thumbnail": "thumbs/OouspRxAKjY.jpg",
-      "views": 569,
+      "views": 570,
       "likes": 4,
       "comments": 1,
       "durationSeconds": 35
@@ -389,7 +393,7 @@
       "title": "The primary driver of muscle growth #bodybuilding",
       "publishedAt": "2026-09-09T15:36:09Z",
       "thumbnail": "thumbs/JaNJx19lu00.jpg",
-      "views": 190,
+      "views": 191,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 15
@@ -399,7 +403,7 @@
       "title": "Add Weight to the Bar #bodybuilding",
       "publishedAt": "2026-09-08T15:17:35Z",
       "thumbnail": "thumbs/Sg6p5AlnPvM.jpg",
-      "views": 390,
+      "views": 391,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 17
@@ -561,8 +565,8 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1410,
-      "likes": 4,
+      "views": 1414,
+      "likes": 3,
       "comments": 0,
       "durationSeconds": 4
     },
