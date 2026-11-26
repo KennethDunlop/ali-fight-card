@@ -1,5 +1,5 @@
 {
-  "version": "1.158",
+  "version": "1.159",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -11,7 +11,7 @@
     "videoCount": 152,
     "channelViews": 69418,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-11-26T07:00:33.911Z",
+    "lastUpdated": "2026-11-26T19:00:33.507Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -307,7 +307,7 @@
       "title": "The gym is easy",
       "publishedAt": "2026-10-07T19:56:05Z",
       "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-      "views": 38,
+      "views": 39,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 678
@@ -317,7 +317,7 @@
       "title": "Dumb people are big and strong #bodybuilding",
       "publishedAt": "2026-10-07T18:33:26Z",
       "thumbnail": "thumbs/esr2XNIaXNI.jpg",
-      "views": 43,
+      "views": 44,
       "likes": 4,
       "comments": 0,
       "durationSeconds": 52
@@ -347,8 +347,8 @@
       "title": "How to Stay Consistent With Your Training",
       "publishedAt": "2026-10-04T13:00:39Z",
       "thumbnail": "thumbs/ciPaln0z-Qs.jpg",
-      "views": 234,
-      "likes": 3,
+      "views": 235,
+      "likes": 4,
       "comments": 0,
       "durationSeconds": 452
     },
@@ -508,7 +508,7 @@
     "title": "The gym is easy",
     "publishedAt": "2026-10-07T19:56:05Z",
     "thumbnail": "thumbs/X5H4Y5C9QW0.jpg",
-    "views": 38,
+    "views": 39,
     "likes": 2,
     "comments": 0,
     "durationSeconds": 678
