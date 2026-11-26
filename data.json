@@ -1,5 +1,5 @@
 {
-  "version": "1.157",
+  "version": "1.158",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 68,
     "videoCount": 152,
-    "channelViews": 69397,
+    "channelViews": 69418,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-11-25T19:00:35.268Z",
+    "lastUpdated": "2026-11-26T07:00:33.911Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -295,6 +295,10 @@
     {
       "date": "2026-11-25",
       "subscriberCount": 68
+    },
+    {
+      "date": "2026-11-26",
+      "subscriberCount": 68
     }
   ],
   "videos": [
@@ -313,7 +317,7 @@
       "title": "Dumb people are big and strong #bodybuilding",
       "publishedAt": "2026-10-07T18:33:26Z",
       "thumbnail": "thumbs/esr2XNIaXNI.jpg",
-      "views": 42,
+      "views": 43,
       "likes": 4,
       "comments": 0,
       "durationSeconds": 52
@@ -333,7 +337,7 @@
       "title": "Overpowered Exercises #bodybuilding #strengthtraining",
       "publishedAt": "2026-10-05T20:25:53Z",
       "thumbnail": "thumbs/SPxj0LjV78A.jpg",
-      "views": 788,
+      "views": 791,
       "likes": 8,
       "comments": 0,
       "durationSeconds": 51
@@ -363,7 +367,7 @@
       "title": "Slow down to get stronger #bodybuilding",
       "publishedAt": "2026-09-25T15:00:19Z",
       "thumbnail": "thumbs/3aMhE-1iG_Q.jpg",
-      "views": 244,
+      "views": 249,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 14
@@ -373,7 +377,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1414,
+      "views": 1424,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
@@ -565,7 +569,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1414,
+      "views": 1424,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
