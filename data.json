@@ -1,5 +1,5 @@
 {
-  "version": "1.159",
+  "version": "1.160",
   "meta": {
     "channelTitle": "Ali MacKensie ",
     "channelId": "UC24iC-l2nMOCRLvWNuArizw",
@@ -9,9 +9,9 @@
     "channelUrl": "https://www.youtube.com/@ali-mackensie",
     "subscriberCount": 68,
     "videoCount": 152,
-    "channelViews": 69418,
+    "channelViews": 69426,
     "channelCreatedAt": "2021-09-15T19:42:23.190392Z",
-    "lastUpdated": "2026-11-26T19:00:33.507Z",
+    "lastUpdated": "2026-11-27T07:00:48.010Z",
     "refreshedBy": "auto"
   },
   "subscriberGoal": 128,
@@ -299,6 +299,10 @@
     {
       "date": "2026-11-26",
       "subscriberCount": 68
+    },
+    {
+      "date": "2026-11-27",
+      "subscriberCount": 68
     }
   ],
   "videos": [
@@ -367,7 +371,7 @@
       "title": "Slow down to get stronger #bodybuilding",
       "publishedAt": "2026-09-25T15:00:19Z",
       "thumbnail": "thumbs/3aMhE-1iG_Q.jpg",
-      "views": 249,
+      "views": 251,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 14
@@ -377,7 +381,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1424,
+      "views": 1425,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
@@ -397,7 +401,7 @@
       "title": "The primary driver of muscle growth #bodybuilding",
       "publishedAt": "2026-09-09T15:36:09Z",
       "thumbnail": "thumbs/JaNJx19lu00.jpg",
-      "views": 191,
+      "views": 192,
       "likes": 2,
       "comments": 0,
       "durationSeconds": 15
@@ -417,7 +421,7 @@
       "title": "Why are you not seeing good progress in the gym #bodybuilding",
       "publishedAt": "2026-09-07T14:51:19Z",
       "thumbnail": "thumbs/Y_ItD0EG_DI.jpg",
-      "views": 47,
+      "views": 48,
       "likes": 2,
       "comments": 1,
       "durationSeconds": 19
@@ -569,7 +573,7 @@
       "title": "#motivation #boxing #cardio",
       "publishedAt": "2026-09-13T15:43:48Z",
       "thumbnail": "thumbs/X-7VkejRVdo.jpg",
-      "views": 1424,
+      "views": 1425,
       "likes": 3,
       "comments": 0,
       "durationSeconds": 4
